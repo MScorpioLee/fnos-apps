@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-12T08:54:52Z",
+  "generated_at": "2026-05-13T08:57:36Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-05-06T17:11:27Z",
-      "download_count": 84,
+      "download_count": 87,
       "app_type": "native",
       "category": "system"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-04-17T08:29:15Z",
-      "download_count": 53,
+      "download_count": 54,
       "app_type": "docker",
       "category": "system"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-04-20T08:40:02Z",
-      "download_count": 159,
+      "download_count": 165,
       "app_type": "native",
       "category": "download"
     },
@@ -96,9 +96,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.1.26",
-      "fpk_version": "3.1.26",
-      "release_tag": "ani-rss/v3.1.26",
+      "version": "3.1.29",
+      "fpk_version": "3.1.29",
+      "release_tag": "ani-rss/v3.1.29",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -106,7 +106,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-12T08:54:13Z",
+      "updated_at": "2026-05-13T08:57:10Z",
       "download_count": 102,
       "app_type": "docker",
       "category": "content"
@@ -192,7 +192,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:27Z",
-      "download_count": 43,
+      "download_count": 47,
       "app_type": "docker",
       "category": "automation"
     },
@@ -234,7 +234,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:26Z",
-      "download_count": 27,
+      "download_count": 28,
       "app_type": "native",
       "category": "media"
     },
@@ -276,7 +276,7 @@
         "arm"
       ],
       "updated_at": "2026-04-20T08:40:04Z",
-      "download_count": 47,
+      "download_count": 51,
       "app_type": "native",
       "category": "automation"
     },
@@ -297,7 +297,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:27Z",
-      "download_count": 497,
+      "download_count": 523,
       "app_type": "docker",
       "category": "browser"
     },
@@ -339,7 +339,7 @@
         "arm"
       ],
       "updated_at": "2026-04-17T08:29:19Z",
-      "download_count": 64,
+      "download_count": 72,
       "app_type": "docker",
       "category": "network"
     },
@@ -496,9 +496,9 @@
       "file_prefix": "easytier",
       "display_name": "EasyTier",
       "description": "简单安全的去中心化异地组网方案，支持 Web 管理和子网代理",
-      "version": "2.4.5",
-      "fpk_version": "2.4.5",
-      "release_tag": "easytier/v2.4.5",
+      "version": "2.6.4",
+      "fpk_version": "2.6.4",
+      "release_tag": "easytier/v2.6.4",
       "service_port": 11210,
       "homepage_url": "https://github.com/EasyTier/EasyTier",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/easytier/fnos/ICON_256.PNG",
@@ -506,7 +506,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-23T08:31:39Z",
+      "updated_at": "2026-05-13T08:57:19Z",
       "download_count": 25,
       "app_type": "native",
       "category": "network"
@@ -644,9 +644,9 @@
       "file_prefix": "forgejo",
       "display_name": "Forgejo",
       "description": "社区驱动的轻量级 Git 代码托管服务器，Gitea 分支。",
-      "version": "15.0.1",
-      "fpk_version": "15.0.1",
-      "release_tag": "forgejo/v15.0.1",
+      "version": "15.0.2",
+      "fpk_version": "15.0.2",
+      "release_tag": "forgejo/v15.0.2",
       "service_port": 3005,
       "homepage_url": "https://codeberg.org/forgejo/forgejo",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/forgejo/fnos/ICON_256.PNG",
@@ -654,7 +654,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-30T08:42:39Z",
+      "updated_at": "2026-05-13T08:57:29Z",
       "download_count": 28,
       "app_type": "native",
       "category": "system"
@@ -676,7 +676,7 @@
         "arm"
       ],
       "updated_at": "2026-05-11T09:02:04Z",
-      "download_count": 29,
+      "download_count": 31,
       "app_type": "docker",
       "category": "content"
     },
@@ -760,7 +760,7 @@
         "arm"
       ],
       "updated_at": "2026-04-18T08:11:12Z",
-      "download_count": 148,
+      "download_count": 150,
       "app_type": "native",
       "category": "download"
     },
@@ -781,7 +781,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:22Z",
-      "download_count": 15,
+      "download_count": 16,
       "app_type": "native",
       "category": "system"
     },
@@ -907,7 +907,7 @@
         "arm"
       ],
       "updated_at": "2026-04-14T08:29:38Z",
-      "download_count": 389,
+      "download_count": 391,
       "app_type": "docker",
       "category": "media"
     },
@@ -938,9 +938,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.1846",
-      "fpk_version": "0.24.1846",
-      "release_tag": "jackett/v0.24.1846",
+      "version": "0.24.1849",
+      "fpk_version": "0.24.1849",
+      "release_tag": "jackett/v0.24.1849",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -948,7 +948,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-12T08:54:30Z",
+      "updated_at": "2026-05-13T08:57:20Z",
       "download_count": 111,
       "app_type": "native",
       "category": "automation"
@@ -970,7 +970,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:28:05Z",
-      "download_count": 658,
+      "download_count": 664,
       "app_type": "native",
       "category": "media"
     },
@@ -1012,7 +1012,7 @@
         "arm"
       ],
       "updated_at": "2026-04-19T08:16:31Z",
-      "download_count": 28,
+      "download_count": 30,
       "app_type": "docker",
       "category": "media"
     },
@@ -1033,7 +1033,7 @@
         "arm"
       ],
       "updated_at": "2026-05-01T08:35:21Z",
-      "download_count": 94,
+      "download_count": 95,
       "app_type": "docker",
       "category": "media"
     },
@@ -1096,7 +1096,7 @@
         "arm"
       ],
       "updated_at": "2026-04-24T08:36:49Z",
-      "download_count": 65,
+      "download_count": 66,
       "app_type": "docker",
       "category": "media"
     },
@@ -1191,9 +1191,9 @@
       "file_prefix": "localai",
       "display_name": "LocalAI",
       "description": "本地 AI 模型推理服务器，兼容 OpenAI API 接口。",
-      "version": "4.2.1",
-      "fpk_version": "4.2.1",
-      "release_tag": "localai/v4.2.1",
+      "version": "4.2.3",
+      "fpk_version": "4.2.3",
+      "release_tag": "localai/v4.2.3",
       "service_port": 8185,
       "homepage_url": "https://localai.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/localai/fnos/ICON_256.PNG",
@@ -1201,7 +1201,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-12T08:54:13Z",
+      "updated_at": "2026-05-13T08:57:08Z",
       "download_count": 91,
       "app_type": "docker",
       "category": "ai"
@@ -1244,7 +1244,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:28Z",
-      "download_count": 27,
+      "download_count": 28,
       "app_type": "native",
       "category": "system"
     },
@@ -1254,9 +1254,9 @@
       "file_prefix": "mattermost",
       "display_name": "Mattermost",
       "description": "企业级即时通讯平台，Slack 的开源替代方案。",
-      "version": "11.6.1",
-      "fpk_version": "11.6.1",
-      "release_tag": "mattermost/v11.6.1",
+      "version": "11.6.2",
+      "fpk_version": "11.6.2",
+      "release_tag": "mattermost/v11.6.2",
       "service_port": 8065,
       "homepage_url": "https://mattermost.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/mattermost/fnos/ICON_256.PNG",
@@ -1264,7 +1264,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-22T08:30:23Z",
+      "updated_at": "2026-05-13T08:57:14Z",
       "download_count": 10,
       "app_type": "docker",
       "category": "system",
@@ -1287,7 +1287,7 @@
         "arm"
       ],
       "updated_at": "2026-05-07T08:50:54Z",
-      "download_count": 52,
+      "download_count": 55,
       "app_type": "docker",
       "category": "ai"
     },
@@ -1329,7 +1329,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:19Z",
-      "download_count": 52,
+      "download_count": 57,
       "app_type": "docker",
       "category": "automation"
     },
@@ -1350,7 +1350,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:17Z",
-      "download_count": 521,
+      "download_count": 525,
       "app_type": "docker",
       "category": "media"
     },
@@ -1371,7 +1371,7 @@
         "arm"
       ],
       "updated_at": "2026-04-29T08:42:07Z",
-      "download_count": 36,
+      "download_count": 38,
       "app_type": "native",
       "category": "content"
     },
@@ -1392,7 +1392,7 @@
         "arm"
       ],
       "updated_at": "2026-04-05T08:08:08Z",
-      "download_count": 39,
+      "download_count": 40,
       "app_type": "docker",
       "category": "content"
     },
@@ -1423,9 +1423,9 @@
       "file_prefix": "moviepilot",
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
-      "version": "2.11.1-1",
-      "fpk_version": "2.11.1-1",
-      "release_tag": "moviepilot/v2.11.1-1",
+      "version": "2.11.2",
+      "fpk_version": "2.11.2",
+      "release_tag": "moviepilot/v2.11.2",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -1433,7 +1433,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-12T08:54:11Z",
+      "updated_at": "2026-05-13T08:57:12Z",
       "download_count": 133,
       "app_type": "docker",
       "category": "content",
@@ -1445,9 +1445,9 @@
       "file_prefix": "n8n",
       "display_name": "n8n",
       "description": "可视化工作流自动化工具，支持连接数百种服务和 API。",
-      "version": "2.20.6",
-      "fpk_version": "2.20.6",
-      "release_tag": "n8n/v2.20.6",
+      "version": "stable",
+      "fpk_version": "stable",
+      "release_tag": "n8n/vstable",
       "service_port": 5678,
       "homepage_url": "https://n8n.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/n8n/fnos/ICON_256.PNG",
@@ -1455,7 +1455,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-12T08:54:13Z",
+      "updated_at": "2026-05-13T08:57:04Z",
       "download_count": 73,
       "app_type": "docker",
       "category": "system"
@@ -1498,7 +1498,7 @@
         "arm"
       ],
       "updated_at": "2026-04-13T08:37:09Z",
-      "download_count": 154,
+      "download_count": 157,
       "app_type": "native",
       "category": "media"
     },
@@ -1541,7 +1541,7 @@
         "arm"
       ],
       "updated_at": "2026-04-28T08:45:13Z",
-      "download_count": 52,
+      "download_count": 53,
       "app_type": "docker",
       "category": "system"
     },
@@ -1562,7 +1562,7 @@
         "arm"
       ],
       "updated_at": "2026-05-01T08:35:25Z",
-      "download_count": 50,
+      "download_count": 51,
       "app_type": "docker",
       "category": "content"
     },
@@ -1646,7 +1646,7 @@
         "arm"
       ],
       "updated_at": "2026-05-09T08:29:15Z",
-      "download_count": 16,
+      "download_count": 19,
       "app_type": "docker",
       "category": "system"
     },
@@ -1698,9 +1698,9 @@
       "file_prefix": "ollama",
       "display_name": "Ollama",
       "description": "本地大语言模型运行引擎，支持 Llama、Mistral、Gemma 等开源模型。",
-      "version": "0.23.2",
-      "fpk_version": "0.23.2",
-      "release_tag": "ollama/v0.23.2",
+      "version": "0.23.3",
+      "fpk_version": "0.23.3",
+      "release_tag": "ollama/v0.23.3",
       "service_port": 11434,
       "homepage_url": "https://github.com/ollama/ollama",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ollama/fnos/ICON_256.PNG",
@@ -1708,7 +1708,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-08T08:28:10Z",
+      "updated_at": "2026-05-13T08:57:10Z",
       "download_count": 159,
       "app_type": "docker",
       "category": "ai"
@@ -1793,7 +1793,7 @@
         "arm"
       ],
       "updated_at": "2026-04-27T13:50:49Z",
-      "download_count": 133,
+      "download_count": 138,
       "app_type": "native",
       "category": "content"
     },
@@ -1824,9 +1824,9 @@
       "file_prefix": "penpot",
       "display_name": "Penpot",
       "description": "开源设计和原型工具，Figma 的自托管替代方案，支持团队协作",
-      "version": "2.14.5",
-      "fpk_version": "2.14.5",
-      "release_tag": "penpot/v2.14.5",
+      "version": "2.15.2",
+      "fpk_version": "2.15.2",
+      "release_tag": "penpot/v2.15.2",
       "service_port": 9001,
       "homepage_url": "https://github.com/penpot/penpot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/penpot/fnos/ICON_256.PNG",
@@ -1834,7 +1834,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-07T08:50:48Z",
+      "updated_at": "2026-05-13T08:57:09Z",
       "download_count": 13,
       "app_type": "docker",
       "category": "system"
@@ -1919,7 +1919,7 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:33Z",
-      "download_count": 348,
+      "download_count": 361,
       "app_type": "native",
       "category": "media"
     },
@@ -1940,7 +1940,7 @@
         "arm"
       ],
       "updated_at": "2026-04-28T08:45:25Z",
-      "download_count": 15,
+      "download_count": 16,
       "app_type": "native",
       "category": "system"
     },
@@ -1961,7 +1961,7 @@
         "arm"
       ],
       "updated_at": "2026-04-05T08:08:36Z",
-      "download_count": 305,
+      "download_count": 324,
       "app_type": "native",
       "category": "automation"
     },
@@ -2003,7 +2003,7 @@
         "arm"
       ],
       "updated_at": "2026-05-04T08:46:09Z",
-      "download_count": 370,
+      "download_count": 382,
       "app_type": "native",
       "category": "download"
     },
@@ -2024,7 +2024,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:36Z",
-      "download_count": 299,
+      "download_count": 304,
       "app_type": "native",
       "category": "automation"
     },
@@ -2055,9 +2055,9 @@
       "file_prefix": "reactive-resume",
       "display_name": "Reactive Resume",
       "description": "在线简历制作工具，支持多种模板和实时预览。",
-      "version": "v5.1.2",
-      "fpk_version": "v5.1.2",
-      "release_tag": "reactive-resume/vv5.1.2",
+      "version": "v5.1.3",
+      "fpk_version": "v5.1.3",
+      "release_tag": "reactive-resume/vv5.1.3",
       "service_port": 3200,
       "homepage_url": "https://github.com/amruthpillai/reactive-resume",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/reactive-resume/fnos/ICON_256.PNG",
@@ -2065,7 +2065,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-11T09:02:09Z",
+      "updated_at": "2026-05-13T08:57:01Z",
       "download_count": 52,
       "app_type": "docker",
       "category": "content"
@@ -2087,7 +2087,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:38Z",
-      "download_count": 98,
+      "download_count": 104,
       "app_type": "native",
       "category": "automation"
     },
@@ -2129,7 +2129,7 @@
         "arm"
       ],
       "updated_at": "2026-05-02T08:27:18Z",
-      "download_count": 10,
+      "download_count": 11,
       "app_type": "docker",
       "category": "download"
     },
@@ -2192,7 +2192,7 @@
         "arm"
       ],
       "updated_at": "2026-04-17T08:29:56Z",
-      "download_count": 78,
+      "download_count": 81,
       "app_type": "native",
       "category": "automation"
     },
@@ -2297,7 +2297,7 @@
         "arm"
       ],
       "updated_at": "2026-05-12T08:54:11Z",
-      "download_count": 79,
+      "download_count": 80,
       "app_type": "native",
       "category": "download"
     },
@@ -2360,7 +2360,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:15Z",
-      "download_count": 146,
+      "download_count": 147,
       "app_type": "docker",
       "category": "media"
     },
@@ -2371,8 +2371,8 @@
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
       "version": "4.1.1",
-      "fpk_version": "4.1.1-r1-ls342",
-      "release_tag": "transmission/v4.1.1-r1-ls342",
+      "fpk_version": "4.1.1-r1-ls343",
+      "release_tag": "transmission/v4.1.1-r1-ls343",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -2380,7 +2380,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-06T09:13:16Z",
+      "updated_at": "2026-05-13T08:57:02Z",
       "download_count": 60,
       "app_type": "docker",
       "category": "download"
@@ -2423,7 +2423,7 @@
         "arm"
       ],
       "updated_at": "2026-05-04T08:46:13Z",
-      "download_count": 69,
+      "download_count": 76,
       "app_type": "docker",
       "category": "system"
     },
@@ -2549,7 +2549,7 @@
         "arm"
       ],
       "updated_at": "2026-05-11T06:56:33Z",
-      "download_count": 9,
+      "download_count": 18,
       "app_type": "docker",
       "category": "automation",
       "post_install_note": "ZoneFoundry Bridge 客户端容器使用 host 网络模式运行，安装后请填写 ZF_TOKEN。"
