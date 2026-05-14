@@ -49,8 +49,10 @@ find "${OC_MODULES}" -path "*/@img/sharp-*" -maxdepth 4 -type d \
 
 # 2) Remove TypeScript declarations, source maps, and documentation
 echo "==> Removing unnecessary files (.d.ts, .map, docs)..."
-find "${OC_MODULES}" -type f \( \
-  -name "*.d.ts" -o -name "*.d.mts" -o -name "*.d.cts" \
+# Skip the openclaw package itself — its docs/reference/templates/*.md are
+# runtime templates (e.g. AGENTS.md), not throwaway documentation.
+find "${OC_MODULES}" -type f -not -path "*/openclaw/docs/*" -not -path "*/openclaw/templates/*" \( \
+    -name "*.d.ts" -o -name "*.d.mts" -o -name "*.d.cts" \
   -o -name "*.map" \
   -o -name "*.md" -o -name "*.markdown" \
   -o -name "LICENSE*" -o -name "LICENCE*" \
