@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-14T15:02:41Z",
+  "generated_at": "2026-05-14T17:53:58Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -76,8 +76,8 @@
       "display_name": "Alist",
       "description": "网盘聚合工具，支持挂载阿里云盘、百度网盘等多种网络存储到本地。",
       "version": "3.60.0",
-      "fpk_version": "3.60.0",
-      "release_tag": "alist/v3.60.0",
+      "fpk_version": "3.60.0-r1",
+      "release_tag": "alist/v3.60.0-r1",
       "service_port": 5246,
       "homepage_url": "https://github.com/AlistGo/alist",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/alist/fnos/ICON_256.PNG",
@@ -85,7 +85,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-20T08:40:02Z",
+      "updated_at": "2026-05-14T17:53:27Z",
       "download_count": 186,
       "app_type": "native",
       "category": "download"
@@ -224,8 +224,8 @@
       "display_name": "Bililive-go",
       "description": "多平台直播录制工具，支持 Bilibili、斗鱼、虎牙等平台的自动录制",
       "version": "0.7.39",
-      "fpk_version": "0.7.39-r1",
-      "release_tag": "bililive-go/v0.7.39-r1",
+      "fpk_version": "0.7.39-r2",
+      "release_tag": "bililive-go/v0.7.39-r2",
       "service_port": 8680,
       "homepage_url": "https://github.com/bililive-go/bililive-go",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/bililive-go/fnos/ICON_256.PNG",
@@ -233,7 +233,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-14T12:57:51Z",
+      "updated_at": "2026-05-14T17:53:31Z",
       "download_count": 29,
       "app_type": "native",
       "category": "media"
@@ -297,7 +297,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:27Z",
-      "download_count": 541,
+      "download_count": 542,
       "app_type": "docker",
       "category": "browser"
     },
@@ -561,8 +561,8 @@
       "display_name": "EZBookkeeping",
       "description": "轻量级个人记账应用，支持多币种、多账户和预算管理",
       "version": "1.5.0",
-      "fpk_version": "1.5.0-r1",
-      "release_tag": "ezbookkeeping/v1.5.0-r1",
+      "fpk_version": "1.5.0-r2",
+      "release_tag": "ezbookkeeping/v1.5.0-r2",
       "service_port": 8580,
       "homepage_url": "https://github.com/mayswind/ezbookkeeping",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ezbookkeeping/fnos/ICON_256.PNG",
@@ -570,7 +570,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-14T12:57:50Z",
+      "updated_at": "2026-05-14T17:53:29Z",
       "download_count": 30,
       "app_type": "native",
       "category": "system"
@@ -645,8 +645,8 @@
       "display_name": "Forgejo",
       "description": "社区驱动的轻量级 Git 代码托管服务器，Gitea 分支。",
       "version": "15.0.2",
-      "fpk_version": "15.0.2",
-      "release_tag": "forgejo/v15.0.2",
+      "fpk_version": "15.0.2-r1",
+      "release_tag": "forgejo/v15.0.2-r1",
       "service_port": 3005,
       "homepage_url": "https://codeberg.org/forgejo/forgejo",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/forgejo/fnos/ICON_256.PNG",
@@ -654,7 +654,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-13T08:57:29Z",
+      "updated_at": "2026-05-14T17:53:47Z",
       "download_count": 28,
       "app_type": "native",
       "category": "system"
@@ -813,8 +813,8 @@
       "display_name": "Headscale",
       "description": "Tailscale 自托管控制服务器，构建私有 VPN 网络。",
       "version": "0.28.0",
-      "fpk_version": "0.28.0",
-      "release_tag": "headscale/v0.28.0",
+      "fpk_version": "0.28.0-r1",
+      "release_tag": "headscale/v0.28.0-r1",
       "service_port": 8480,
       "homepage_url": "https://github.com/juanfont/headscale",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/headscale/fnos/ICON_256.PNG",
@@ -822,7 +822,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-18T08:11:11Z",
+      "updated_at": "2026-05-14T17:53:28Z",
       "download_count": 48,
       "app_type": "native",
       "category": "network"
@@ -1213,8 +1213,8 @@
       "display_name": "Loki",
       "description": "轻量级日志聚合系统，Grafana 生态的日志解决方案。",
       "version": "3.7.2",
-      "fpk_version": "3.7.2",
-      "release_tag": "loki/v3.7.2",
+      "fpk_version": "3.7.2-r1",
+      "release_tag": "loki/v3.7.2-r1",
       "service_port": 3100,
       "homepage_url": "https://grafana.com/oss/loki/",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/loki/fnos/ICON_256.PNG",
@@ -1222,7 +1222,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-14T08:52:34Z",
+      "updated_at": "2026-05-14T17:53:53Z",
       "download_count": 32,
       "app_type": "native",
       "category": "system"
@@ -1234,8 +1234,8 @@
       "display_name": "Lucky",
       "description": "网络工具箱，集成 DDNS、反向代理、HTTPS 证书、端口转发等功能",
       "version": "2.27.2",
-      "fpk_version": "2.27.2",
-      "release_tag": "lucky/v2.27.2",
+      "fpk_version": "2.27.2-r1",
+      "release_tag": "lucky/v2.27.2-r1",
       "service_port": 16601,
       "homepage_url": "https://lucky666.cn",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/lucky/fnos/ICON_256.PNG",
@@ -1243,7 +1243,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-16T08:29:28Z",
+      "updated_at": "2026-05-14T17:53:23Z",
       "download_count": 28,
       "app_type": "native",
       "category": "system"
@@ -1329,7 +1329,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:19Z",
-      "download_count": 59,
+      "download_count": 60,
       "app_type": "docker",
       "category": "automation"
     },
@@ -1350,7 +1350,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:17Z",
-      "download_count": 536,
+      "download_count": 538,
       "app_type": "docker",
       "category": "media"
     },
@@ -1867,8 +1867,8 @@
       "display_name": "PicoClaw",
       "description": "超轻量 AI 智能体框架，Go 编写，10MB 内存占用，支持多模型多通道智能自动化",
       "version": "0.2.8",
-      "fpk_version": "0.2.8",
-      "release_tag": "picoclaw/v0.2.8",
+      "fpk_version": "0.2.8-r1",
+      "release_tag": "picoclaw/v0.2.8-r1",
       "service_port": 18790,
       "homepage_url": "https://github.com/sipeed/picoclaw",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/picoclaw/fnos/ICON_256.PNG",
@@ -1876,7 +1876,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-06T17:11:10Z",
+      "updated_at": "2026-05-14T17:53:24Z",
       "download_count": 275,
       "app_type": "native",
       "category": "ai"
@@ -1898,7 +1898,7 @@
         "arm"
       ],
       "updated_at": "2026-05-12T08:54:10Z",
-      "download_count": 112,
+      "download_count": 113,
       "app_type": "docker",
       "category": "network"
     },
@@ -1930,8 +1930,8 @@
       "display_name": "Prometheus",
       "description": "时序数据库和监控系统，支持灵活的查询语言和告警规则。",
       "version": "3.11.3",
-      "fpk_version": "3.11.3",
-      "release_tag": "prometheus/v3.11.3",
+      "fpk_version": "3.11.3-r1",
+      "release_tag": "prometheus/v3.11.3-r1",
       "service_port": 9090,
       "homepage_url": "https://prometheus.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/prometheus/fnos/ICON_256.PNG",
@@ -1939,7 +1939,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-28T08:45:25Z",
+      "updated_at": "2026-05-14T17:53:44Z",
       "download_count": 16,
       "app_type": "native",
       "category": "system"
@@ -2161,8 +2161,8 @@
       "display_name": "SmartDNS",
       "description": "本地 DNS 加速与优选工具，多 DNS 查询并返回最快结果",
       "version": "1.2025.11.09-1443",
-      "fpk_version": "1.2025.11.09-1443",
-      "release_tag": "smartdns/v1.2025.11.09-1443",
+      "fpk_version": "1.2025.11.09-1443-r1",
+      "release_tag": "smartdns/v1.2025.11.09-1443-r1",
       "service_port": 6580,
       "homepage_url": "https://github.com/pymumu/smartdns",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/smartdns/fnos/ICON_256.PNG",
@@ -2170,7 +2170,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-23T08:31:35Z",
+      "updated_at": "2026-05-14T17:53:32Z",
       "download_count": 63,
       "app_type": "native",
       "category": "network"
@@ -2518,8 +2518,8 @@
       "display_name": "ZeroClaw",
       "description": "轻量级 AI 智能体运行时，Rust 编写，<5MB 内存占用，支持多模型多通道自主智能体工作流",
       "version": "0.7.5",
-      "fpk_version": "0.7.5",
-      "release_tag": "zeroclaw/v0.7.5",
+      "fpk_version": "0.7.5-r1",
+      "release_tag": "zeroclaw/v0.7.5-r1",
       "service_port": 42617,
       "homepage_url": "https://github.com/zeroclaw-labs/zeroclaw",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/zeroclaw/fnos/ICON_256.PNG",
@@ -2527,7 +2527,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-08T08:28:13Z",
+      "updated_at": "2026-05-14T17:53:32Z",
       "download_count": 129,
       "app_type": "native",
       "category": "ai"
