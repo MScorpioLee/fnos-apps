@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-14T12:58:02Z",
+  "generated_at": "2026-05-14T12:58:20Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -750,8 +750,8 @@
       "display_name": "Gopeed",
       "description": "Gopeed是一款支持HTTP、BitTorrent、Magnet等协议的高速下载器。",
       "version": "1.9.3",
-      "fpk_version": "1.9.3",
-      "release_tag": "gopeed/v1.9.3",
+      "fpk_version": "1.9.3-r1",
+      "release_tag": "gopeed/v1.9.3-r1",
       "service_port": 9999,
       "homepage_url": "https://gopeed.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/gopeed/fnos/ICON_256.PNG",
@@ -759,7 +759,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-18T08:11:12Z",
+      "updated_at": "2026-05-14T12:57:59Z",
       "download_count": 154,
       "app_type": "native",
       "category": "download"
@@ -1993,8 +1993,8 @@
       "display_name": "qBittorrent",
       "description": "qBittorrent是一个轻量级BitTorrent客户端，简单易用，功能强大。默认用户名admin，密码adminadmin。",
       "version": "5.2.0",
-      "fpk_version": "5.2.0",
-      "release_tag": "qbittorrent/v5.2.0",
+      "fpk_version": "5.2.0-r1",
+      "release_tag": "qbittorrent/v5.2.0-r1",
       "service_port": 8085,
       "homepage_url": "https://github.com/userdocs/qbittorrent-nox-static",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/qbittorrent/fnos/ICON_256.PNG",
@@ -2002,7 +2002,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-04T08:46:09Z",
+      "updated_at": "2026-05-14T12:57:59Z",
       "download_count": 391,
       "app_type": "native",
       "category": "download"
@@ -2077,8 +2077,8 @@
       "display_name": "Readarr",
       "description": "电子书自动化管理工具，自动搜索和下载电子书与有声书",
       "version": "0.4.18.2805",
-      "fpk_version": "0.4.18.2805",
-      "release_tag": "readarr/v0.4.18.2805",
+      "fpk_version": "0.4.18.2805-r1",
+      "release_tag": "readarr/v0.4.18.2805-r1",
       "service_port": 8787,
       "homepage_url": "https://readarr.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/readarr/fnos/ICON_256.PNG",
@@ -2086,7 +2086,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-16T08:29:38Z",
+      "updated_at": "2026-05-14T12:58:09Z",
       "download_count": 104,
       "app_type": "native",
       "category": "automation"
@@ -2182,8 +2182,8 @@
       "display_name": "Sonarr",
       "description": "电视剧自动化管理工具，自动搜索、下载和管理剧集",
       "version": "4.0.17.2952",
-      "fpk_version": "4.0.17.2952",
-      "release_tag": "sonarr/v4.0.17.2952",
+      "fpk_version": "4.0.17.2952-r1",
+      "release_tag": "sonarr/v4.0.17.2952-r1",
       "service_port": 8989,
       "homepage_url": "https://sonarr.tv",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sonarr/fnos/ICON_256.PNG",
@@ -2191,7 +2191,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-17T08:29:56Z",
+      "updated_at": "2026-05-14T12:58:10Z",
       "download_count": 84,
       "app_type": "native",
       "category": "automation"
