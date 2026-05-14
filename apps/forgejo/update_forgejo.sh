@@ -9,7 +9,7 @@ APP_NAME="forgejo"
 APP_DISPLAY_NAME="Forgejo"
 APP_VERSION_VAR="FORGEJO_VERSION"
 APP_VERSION="${FORGEJO_VERSION:-latest}"
-APP_DEPS=(curl tar)
+APP_DEPS=(curl tar jq)
 APP_FPK_PREFIX="forgejo"
 APP_HELP_VERSION_EXAMPLE="9.0.4"
 
@@ -33,7 +33,7 @@ app_get_latest_version() {
 
     local tag
     tag=$(curl -sL "https://codeberg.org/api/v1/repos/forgejo/forgejo/releases/latest" 2>/dev/null | \
-        grep '"tag_name":' | sed -E 's/.*"v?([^"]+)".*/\1/')
+        jq -r '.tag_name' | sed 's/^v//')
 
     if [ "$APP_VERSION" = "latest" ]; then
         APP_VERSION="$tag"
