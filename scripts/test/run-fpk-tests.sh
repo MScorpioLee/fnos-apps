@@ -63,7 +63,7 @@ info "── Running fpk-runner cycle for $SLUG ($FPK_NAME) ──"
 set +e
 docker run --rm \
     "${MOUNT_ARGS[@]}" \
-    "${RUNNER_ENV[@]}" \
+    ${RUNNER_ENV[@]+"${RUNNER_ENV[@]}"} \
     --entrypoint bash \
     "$IMAGE_TAG" \
     -c '
