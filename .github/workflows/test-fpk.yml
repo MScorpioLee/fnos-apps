@@ -1,0 +1,101 @@
+name: FPK Runtime Test (L2 + L3)
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+    paths:
+      - 'apps/**'
+      - 'shared/**'
+      - 'scripts/**'
+      - '.github/workflows/test-fpk.yml'
+      - '!**/*.md'
+  workflow_dispatch:
+    inputs:
+      app:
+        description: 'App slug to test'
+        required: true
+        type: string
+      version:
+        description: 'Version (empty for latest)'
+        required: false
+        type: string
+        default: ''
+
+env:
+  WHITELIST: "gopeed syncthing"
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        app: [gopeed, syncthing]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Skip if not whitelisted
+        id: gate
+        run: |
+          APP="${{ matrix.app }}"
+          WL="${WHITELIST}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            APP="${{ inputs.app }}"
+          fi
+          if ! echo " $WL " | grep -q " $APP "; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "App '$APP' not in WHITELIST '$WL' — skipping for safety. Add it after manual sign-off."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "app=$APP" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Resolve version
+        if: steps.gate.outputs.skip != 'true'
+        id: version
+        run: |
+          APP="${{ steps.gate.outputs.app }}"
+          INPUT_V="${{ inputs.version }}"
+          bash "scripts/apps/${APP}/get-latest-version.sh" "${INPUT_V}"
+
+      - name: Build .fpk (x86 only for L3 smoke)
+        if: steps.gate.outputs.skip != 'true'
+        env:
+          DEB_ARCH: amd64
+          ZIP_ARCH: amd64
+          TARBALL_ARCH: amd64
+        run: |
+          APP="${{ steps.gate.outputs.app }}"
+          VERSION="${{ steps.version.outputs.version }}"
+          export VERSION
+          bash "scripts/apps/${APP}/build.sh"
+          bash scripts/build-fpk.sh "apps/${APP}" app.tgz "${VERSION}" "x86"
+          FPK=$(ls "${APP}"_*.fpk | head -1)
+          echo "FPK=$FPK" >> "$GITHUB_ENV"
+          ls -lh "$FPK"
+
+      - name: L2 — verify-fpk contract
+        if: steps.gate.outputs.skip != 'true'
+        run: |
+          sudo apt-get install -y jq file
+          bash scripts/test/verify-fpk.sh "$FPK" "${{ steps.gate.outputs.app }}"
+
+      - name: L3 — fpk-runner install/start/probe/stop/uninstall
+        if: steps.gate.outputs.skip != 'true'
+        run: |
+          bash scripts/test/run-fpk-tests.sh "$FPK" "${{ steps.gate.outputs.app }}"
+
+      - name: Summary
+        if: always() && steps.gate.outputs.skip != 'true'
+        run: |
+          {
+            echo "## FPK Test Result — ${{ matrix.app }}"
+            echo ""
+            echo "- **Version:** ${{ steps.version.outputs.version }}"
+            echo "- **Artifact:** \`$FPK\`"
+            echo "- **Job status:** ${{ job.status }}"
+          } >> "$GITHUB_STEP_SUMMARY"
