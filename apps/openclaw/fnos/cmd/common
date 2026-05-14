@@ -136,8 +136,8 @@ stop_openclaw_gateway()
     fi
 
     # 兜底：杀残留的 openclaw 相关进程
-    pkill -f "openclaw.*gateway" 2>/dev/null || true
-    pkill -f "openclaw.*daemon" 2>/dev/null || true
+    pkill -f "openclaw.*gateway" 2>/dev/null || true  # pkill-f-ok
+    pkill -f "openclaw.*daemon" 2>/dev/null || true  # pkill-f-ok
 
     install_log "OpenClaw Gateway 已停止"
 }

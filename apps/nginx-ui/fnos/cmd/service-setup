@@ -18,9 +18,9 @@ service_preuninst() {
     pkill -9 -x "nginx-ui" 2>/dev/null || true
 
     # 终止内置 nginx 进程（匹配应用数据目录，避免误杀独立 Nginx 应用或系统 nginx）
-    pkill -f "nginx.*${TRIM_PKGVAR}" 2>/dev/null || true
+    pkill -f "nginx.*${TRIM_PKGVAR}" 2>/dev/null || true  # pkill-f-ok
     sleep 1
-    pkill -9 -f "nginx.*${TRIM_PKGVAR}" 2>/dev/null || true
+    pkill -9 -f "nginx.*${TRIM_PKGVAR}" 2>/dev/null || true  # pkill-f-ok
 }
 
 service_poststop() {

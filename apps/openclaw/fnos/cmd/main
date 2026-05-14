@@ -211,8 +211,8 @@ stop_process() {
     fi
 
     # 兜底清理
-    pkill -f "openclaw.*gateway" 2>/dev/null || true
-    pkill -f "iframe-proxy" 2>/dev/null || true
+    pkill -f "openclaw.*gateway" 2>/dev/null || true  # pkill-f-ok
+    pkill -f "iframe-proxy" 2>/dev/null || true  # pkill-f-ok
 
     log_msg "${APP_NAME} 已停止"
 }

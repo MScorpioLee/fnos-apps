@@ -44,11 +44,11 @@ SVC_WRITE_PID=y
 # stop_daemon 依赖 PID 文件，若 PID 文件丢失或过期则无法杀死进程
 # 此函数按进程名兜底，确保不留残留
 ensure_qbit_stopped() {
-    pkill -f "${QBIT_BIN}" 2>/dev/null || true
+    pkill -f "${QBIT_BIN}" 2>/dev/null || true  # pkill-f-ok
     sleep 2
     # 仍未退出则强制杀
     if pgrep -f "${QBIT_BIN}" > /dev/null 2>&1; then
-        pkill -9 -f "${QBIT_BIN}" 2>/dev/null || true
+        pkill -9 -f "${QBIT_BIN}" 2>/dev/null || true  # pkill-f-ok
         sleep 1
     fi
 }

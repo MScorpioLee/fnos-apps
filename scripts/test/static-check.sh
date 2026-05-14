@@ -289,8 +289,8 @@ check_service_setup_syntax() {
         fail "$slug: cmd/service-setup has bash syntax errors"
         return 1
     fi
-    if grep -nE '\bpkill[[:space:]]+-f\b' "$svc" >/dev/null; then
-        fail "$slug: cmd/service-setup uses 'pkill -f' — known foot-gun (issue #112). Use 'pkill -x' instead."
+    if grep -nE '\bpkill[[:space:]]+(-9[[:space:]]+)?-f\b' "$svc" | grep -v '# pkill-f-ok' >/dev/null; then
+        fail "$slug: cmd/service-setup uses 'pkill -f' — issue #112 footgun. Use 'pkill -x', or annotate the line with trailing '# pkill-f-ok' if -f is genuinely required (e.g. pattern contains absolute path or unique cmdline substring)."
         return 1
     fi
     pass "$slug: cmd/service-setup syntax & no pkill -f"
