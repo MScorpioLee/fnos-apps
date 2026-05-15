@@ -82,14 +82,34 @@ apply_port() {
 }
 
 service_postupgrade() {
+    local env_file="${TRIM_APPDEST}/docker/.env"
+
     if [ -f "$PORT_SAVE" ]; then
         apply_port "$(cat "$PORT_SAVE")"
     fi
+
+    # MEDIA_DIR: prefer persisted save file; fall back to migrating from .env
+    # for users upgrading from earlier broken revisions that wrote to .env only.
     if [ -f "$MEDIA_DIR_SAVE" ]; then
         apply_media_dir "$(cat "$MEDIA_DIR_SAVE")"
+    elif [ -f "$env_file" ]; then
+        local mv
+        mv="$(grep -E '^MEDIA_DIR=' "$env_file" | head -1 | cut -d= -f2-)"
+        if [ -n "$mv" ]; then
+            install_log "Migrating MEDIA_DIR from .env (legacy): $mv"
+            apply_media_dir "$mv"
+        fi
     fi
+
     if [ -f "$DOWNLOAD_DIR_SAVE" ]; then
         apply_download_dir "$(cat "$DOWNLOAD_DIR_SAVE")"
+    elif [ -f "$env_file" ]; then
+        local dv
+        dv="$(grep -E '^DOWNLOAD_DIR=' "$env_file" | head -1 | cut -d= -f2-)"
+        if [ -n "$dv" ]; then
+            install_log "Migrating DOWNLOAD_DIR from .env (legacy): $dv"
+            apply_download_dir "$dv"
+        fi
     fi
 }
 

@@ -66,14 +66,34 @@ service_restore() {
 }
 
 service_postupgrade() {
+    local env_file="${TRIM_APPDEST}/docker/.env"
+
     if [ -f "$PORT_SAVE" ]; then
         apply_port "$(cat "$PORT_SAVE")"
     fi
+
+    # AUDIOBOOK_DIR: prefer persisted save file; fall back to migrating from .env
+    # for users upgrading from earlier broken revisions that wrote to .env only.
     if [ -f "$AUDIOBOOK_DIR_SAVE" ]; then
         apply_audiobook_dir "$(cat "$AUDIOBOOK_DIR_SAVE")"
+    elif [ -f "$env_file" ]; then
+        local av
+        av="$(grep -E '^AUDIOBOOK_DIR=' "$env_file" | head -1 | cut -d= -f2-)"
+        if [ -n "$av" ]; then
+            install_log "Migrating AUDIOBOOK_DIR from .env (legacy): $av"
+            apply_audiobook_dir "$av"
+        fi
     fi
+
     if [ -f "$PODCAST_DIR_SAVE" ]; then
         apply_podcast_dir "$(cat "$PODCAST_DIR_SAVE")"
+    elif [ -f "$env_file" ]; then
+        local pv
+        pv="$(grep -E '^PODCAST_DIR=' "$env_file" | head -1 | cut -d= -f2-)"
+        if [ -n "$pv" ]; then
+            install_log "Migrating PODCAST_DIR from .env (legacy): $pv"
+            apply_podcast_dir "$pv"
+        fi
     fi
 }
 
