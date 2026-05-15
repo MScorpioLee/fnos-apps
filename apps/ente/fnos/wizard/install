@@ -8,6 +8,10 @@
             },
             {
                 "type": "tips",
+                "helpText": "<b>⚠／镜像拉取注意事项（在中国大陆重要）：</b><br>Ente 后端镜像 <code>ghcr.io/ente-io/server</code> 托管在 GitHub Container Registry，<b>DaoCloud 公益镜像源未收录（在黑名单）</b>，直接安装会失败。<br><br>请在“飞牛 NAS 设置 → Docker → 镜像加速器”中使用以下加速源（任选一个可能都有很多人用，请進一步 fallback）：<br>  • <code>https://docker.1ms.run</code><br>  • <code>https://docker.1panel.live</code><br>  • <code>https://hub.rat.dev</code><br><br>参考 issue <a href=\"https://github.com/conversun/fnos-apps/issues/139\">#139</a> / <a href=\"https://github.com/DaoCloud/public-image-mirror/issues/2328\">DaoCloud allowlist</a>。"
+            },
+            {
+                "type": "tips",
                 "helpText": "默认数据库与对象存储账号为示例值，仅用于快速启动。<br>生产环境建议修改 docker-compose 中的默认密码并启用 HTTPS。"
             }
         ]
