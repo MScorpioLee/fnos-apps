@@ -1,5 +1,28 @@
 #!/bin/bash
 
+# Sanitize a wizard password into a value safe for .env / docker-compose.
+# - strips ALL whitespace (newlines, tabs, spaces would break .env parsing)
+# - removes characters that would be interpreted by docker-compose:
+#     $ (env var expansion), " ' \` (quoting), # (comment), \ (escape)
+# - truncates to 8 chars (VNC protocol hard limit; everything past is ignored)
+# Returns empty string if nothing survives.
+sanitize_vnc_password() {
+    local raw="$1"
+    # 1) strip newlines/tabs/spaces
+    raw="${raw//[[:space:]]/}"
+    # 2) keep only printable ASCII minus shell/dotenv-hostile characters
+    local safe=""
+    local i ch
+    for (( i=0; i<${#raw} && i<8; i++ )); do
+        ch="${raw:$i:1}"
+        case "$ch" in
+            [\$\"\'\`\#\\]) ;;
+            *) safe="${safe}${ch}" ;;
+        esac
+    done
+    printf '%s' "$safe"
+}
+
 service_postinst() {
     local env_file="${TRIM_APPDEST}/docker/.env"
 
@@ -11,9 +34,16 @@ service_postinst() {
     # the noVNC web entry. Leaving blank preserves the historical no-auth behavior.
     : > "$env_file"
     if [ -n "${wizard_password}" ]; then
-        echo "VNC_PASSWORD=${wizard_password}" >> "$env_file"
-        chmod 600 "$env_file"
-        install_log "Wrote docker .env: VNC_PASSWORD set (length=${#wizard_password})"
+        local clean
+        clean="$(sanitize_vnc_password "${wizard_password}")"
+        if [ -n "$clean" ]; then
+            echo "VNC_PASSWORD=${clean}" >> "$env_file"
+            chmod 600 "$env_file"
+            install_log "Wrote docker .env: VNC_PASSWORD set (sanitized length=${#clean})"
+        else
+            rm -f "$env_file"
+            install_log "wizard_password contained only invalid characters; VNC auth NOT enabled"
+        fi
     else
         rm -f "$env_file"
         install_log "No wizard password supplied; Firefox runs without VNC auth"

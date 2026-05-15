@@ -30,8 +30,13 @@ BASE_TAG="${APP_SLUG}/v${VERSION}"
 # Find all existing releases for this version (base tag and any -rN revisions).
 # Cleanup step deletes old revisions, so we must check both base and -rN to
 # detect whether this version has ever been released.
+#
+# IMPORTANT: scoped to this app via --json + jq filter so we only count THIS app's
+# releases. The repo has 300+ releases total, so listing without per-app filter and
+# a high limit risks missing older releases (e.g. chromium/v26.04.1 at position 211
+# was missed by an unscoped --limit 200, which caused new revisions to never build).
 EXISTING_TAGS=$(
-  gh release list --limit 200 --json tagName -q '.[].tagName' | \
+  gh release list --limit 1000 --json tagName -q ".[] | .tagName | select(startswith(\"${APP_SLUG}/v${VERSION}\"))" | \
     { grep -E "^${BASE_TAG}(-r[0-9]+)?$" || true; }
 )
 
