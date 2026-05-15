@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-14T17:54:50Z",
+  "generated_at": "2026-05-15T04:09:42Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -192,7 +192,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:27Z",
-      "download_count": 53,
+      "download_count": 54,
       "app_type": "docker",
       "category": "automation"
     },
@@ -297,7 +297,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:27Z",
-      "download_count": 542,
+      "download_count": 550,
       "app_type": "docker",
       "category": "browser"
     },
@@ -360,7 +360,7 @@
         "arm"
       ],
       "updated_at": "2026-05-10T08:34:16Z",
-      "download_count": 62,
+      "download_count": 64,
       "app_type": "native",
       "category": "download"
     },
@@ -465,7 +465,7 @@
         "arm"
       ],
       "updated_at": "2026-04-07T08:21:53Z",
-      "download_count": 163,
+      "download_count": 164,
       "app_type": "docker",
       "category": "system"
     },
@@ -739,7 +739,7 @@
         "arm"
       ],
       "updated_at": "2026-04-20T08:39:56Z",
-      "download_count": 32,
+      "download_count": 33,
       "app_type": "docker",
       "category": "system"
     },
@@ -970,7 +970,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:28:05Z",
-      "download_count": 670,
+      "download_count": 671,
       "app_type": "native",
       "category": "media"
     },
@@ -1096,7 +1096,7 @@
         "arm"
       ],
       "updated_at": "2026-04-24T08:36:49Z",
-      "download_count": 66,
+      "download_count": 68,
       "app_type": "docker",
       "category": "media"
     },
@@ -1138,7 +1138,7 @@
         "arm"
       ],
       "updated_at": "2026-04-23T08:31:34Z",
-      "download_count": 61,
+      "download_count": 62,
       "app_type": "docker",
       "category": "ai",
       "post_install_note": "安装后请在 Web 界面配置 OpenAI/Anthropic 等 API Key。"
@@ -1350,7 +1350,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:17Z",
-      "download_count": 538,
+      "download_count": 540,
       "app_type": "docker",
       "category": "media"
     },
@@ -1793,7 +1793,7 @@
         "arm"
       ],
       "updated_at": "2026-04-27T13:50:49Z",
-      "download_count": 141,
+      "download_count": 142,
       "app_type": "native",
       "category": "content"
     },
@@ -1898,7 +1898,7 @@
         "arm"
       ],
       "updated_at": "2026-05-12T08:54:10Z",
-      "download_count": 113,
+      "download_count": 114,
       "app_type": "docker",
       "category": "network"
     },
@@ -1919,7 +1919,7 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:33Z",
-      "download_count": 388,
+      "download_count": 390,
       "app_type": "native",
       "category": "media"
     },
@@ -1961,7 +1961,7 @@
         "arm"
       ],
       "updated_at": "2026-04-05T08:08:36Z",
-      "download_count": 350,
+      "download_count": 358,
       "app_type": "native",
       "category": "automation"
     },
@@ -1993,8 +1993,8 @@
       "display_name": "qBittorrent",
       "description": "qBittorrent是一个轻量级BitTorrent客户端，简单易用，功能强大。默认用户名admin，密码adminadmin。",
       "version": "5.2.0",
-      "fpk_version": "5.2.0-r1",
-      "release_tag": "qbittorrent/v5.2.0-r1",
+      "fpk_version": "5.2.0-r2",
+      "release_tag": "qbittorrent/v5.2.0-r2",
       "service_port": 8085,
       "homepage_url": "https://github.com/userdocs/qbittorrent-nox-static",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/qbittorrent/fnos/ICON_256.PNG",
@@ -2002,7 +2002,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-14T12:57:59Z",
+      "updated_at": "2026-05-15T04:09:27Z",
       "download_count": 391,
       "app_type": "native",
       "category": "download"
@@ -2360,7 +2360,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:15Z",
-      "download_count": 150,
+      "download_count": 151,
       "app_type": "docker",
       "category": "media"
     },
@@ -2423,7 +2423,7 @@
         "arm"
       ],
       "updated_at": "2026-05-04T08:46:13Z",
-      "download_count": 79,
+      "download_count": 81,
       "app_type": "docker",
       "category": "system"
     },
