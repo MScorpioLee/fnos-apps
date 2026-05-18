@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-18T03:57:02Z",
+  "generated_at": "2026-05-18T04:21:24Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -2445,6 +2445,27 @@
       ],
       "updated_at": "2026-05-04T08:46:13Z",
       "download_count": 84,
+      "app_type": "docker",
+      "category": "system"
+    },
+    {
+      "slug": "visor",
+      "appname": "visor",
+      "file_prefix": "visor",
+      "display_name": "Visor",
+      "description": "现代化堡垒机 + 自动化运维平台，支持 SSH/RDP/VNC 在线终端、文件管理、批量操作、计划任务、主机监控。",
+      "version": "2.5.7",
+      "fpk_version": "2.5.7",
+      "release_tag": "visor/v2.5.7",
+      "service_port": 1081,
+      "homepage_url": "https://github.com/dromara/orion-visor",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/visor/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-05-18T04:21:07Z",
+      "download_count": 0,
       "app_type": "docker",
       "category": "system"
     },
