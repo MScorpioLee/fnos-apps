@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Visor.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Visor",
+                "permission": {
+                    "rw": [
+                        "visor"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "visor",
+                "path": "docker"
+            }
+        ]
+    }
+}
