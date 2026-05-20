@@ -30,6 +30,11 @@ unzip -q metacubexd.zip
 [ ! -d "metacubexd-gh-pages" ] && { echo "metacubexd-gh-pages directory not found" >&2; exit 1; }
 cp -a metacubexd-gh-pages/. app_root/metacubexd/
 
+# Inject fnOS framework guard patch (intercepts dashboard PUT /configs to prevent port drift)
+cp apps/mihomo/fnos/patches/fnos-patch.js app_root/metacubexd/fnos-patch.js
+sed -i.bak 's|</body>|<script src="./fnos-patch.js"></script></body>|' app_root/metacubexd/index.html
+rm -f app_root/metacubexd/index.html.bak
+
 # fnOS framework files
 cp apps/mihomo/fnos/bin/mihomo-server app_root/bin/mihomo-server
 chmod +x app_root/bin/mihomo-server

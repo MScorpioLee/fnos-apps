@@ -25,47 +25,17 @@
 
 在 fnOS 应用中心点击 Mihomo 图标, 浏览器自动打开 `http://<NAS_IP>:9097/ui/`. dashboard 默认无 secret, 可在「设置」中修改.
 
-### 2. 添加代理节点 (关键步骤)
+### 2. 添加代理节点 (推荐: dashboard 直接拉订阅)
 
-dashboard **不支持**直接编辑 yaml. 用以下任一方式编辑 `config.yaml`:
+**最简方式**: dashboard 顶部 「配置」 (Config) 或 「概览」 (Overview) → 找到 "Update Config from URL" 入口 → 粘贴自己的 Clash 格式订阅 URL → 立即生效。
 
-- **SSH**: `nano /vol*/apps/mihomo/var/config/config.yaml`
-- **fnOS 文件管理器**: 打开 `apps/mihomo/var/config/config.yaml`
+本应用预置了 fnOS framework guard JS 拦截器, 会自动把订阅配置中的 ``external-controller`` 和 ``external-ui`` 改写为 fnOS 端口, 避免 mihomo 切端口导致 dashboard 失联。
 
-在 `proxies:` 下追加自己的节点, 例如:
+**其他方式** (需要本地整理的用户):
 
-```yaml
-proxies:
-  - name: "HK-01"
-    type: ss
-    server: example.com
-    port: 443
-    cipher: aes-128-gcm
-    password: your-password
-```
-
-或使用 [proxy-providers](https://wiki.metacubex.one/config/proxy-providers/) 从订阅 URL 自动拉取:
-
-```yaml
-proxy-providers:
-  my-sub:
-    type: http
-    url: "https://your-subscription-url"
-    interval: 86400
-    path: ./providers/my-sub.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-
-proxy-groups:
-  - name: "PROXY"
-    type: select
-    use:
-      - my-sub
-    proxies:
-      - DIRECT
-```
+- SSH: ``nano /vol*/apps/mihomo/var/config/config.yaml``
+- fnOS 文件管理器编辑 ``apps/mihomo/var/config/config.yaml``
+- proxy-providers 模式 → mihomo 定期自动拉订阅
 
 ### 3. 重新加载配置
 

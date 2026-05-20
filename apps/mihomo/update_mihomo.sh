@@ -81,6 +81,11 @@ app_build_app_tgz() {
     # metacubexd 静态文件
     cp -a "$WORK_DIR/metacubexd-gh-pages/." "$dst/metacubexd/"
 
+    # 注入 fnOS framework guard patch (拦截 dashboard PUT /configs 改写 external-controller 避免端口漂移)
+    cp "$PKG_DIR/patches/fnos-patch.js" "$dst/metacubexd/fnos-patch.js"
+    sed -i.bak 's|</body>|<script src="./fnos-patch.js"></script></body>|' "$dst/metacubexd/index.html"
+    rm -f "$dst/metacubexd/index.html.bak"
+
     # fnOS 框架文件
     cp "$PKG_DIR/bin/mihomo-server" "$dst/bin/mihomo-server"
     chmod +x "$dst/bin/mihomo-server"

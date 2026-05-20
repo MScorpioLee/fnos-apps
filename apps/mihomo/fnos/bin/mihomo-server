@@ -5,15 +5,27 @@ APP_DATA_DIR=$1
 CONF_DIR="$APP_DATA_DIR/config"
 CONFIG_FILE="$CONF_DIR/config.yaml"
 UI_DIR="metacubexd"
-UI_LINK="$CONF_DIR/metacubexd"
-UI_TARGET="$APP_DIR/metacubexd"
+UI_RUNTIME_DIR="$CONF_DIR/metacubexd"
+UI_SOURCE_DIR="$APP_DIR/metacubexd"
 LOG_FILE="$APP_DATA_DIR/mihomo.log"
 
 mkdir -p "$CONF_DIR"
 
-# metacubexd symlink — mihomo SAFE_PATHS 要求 external-ui 在 home dir 下
-if [ ! -L "$UI_LINK" ] && [ ! -e "$UI_LINK" ]; then
-    ln -sf "$UI_TARGET" "$UI_LINK"
+# 在 CONF_DIR 下重建 metacubexd 目录 (代替 symlink) ——每次启动重生以保证:
+#   1. mihomo SAFE_PATHS 检查通过 (external-ui 在 home dir 下)
+#   2. fnos-patch.js 中的端口与当前 TRIM_SERVICE_PORT 一致 (用户可能在 fnOS 改过端口)
+if [ -L "$UI_RUNTIME_DIR" ]; then
+    rm -f "$UI_RUNTIME_DIR"
+elif [ -d "$UI_RUNTIME_DIR" ]; then
+    rm -rf "$UI_RUNTIME_DIR"
+fi
+mkdir -p "$UI_RUNTIME_DIR"
+cp -a "$UI_SOURCE_DIR/." "$UI_RUNTIME_DIR/"
+
+# 将 fnos-patch.js 中的 __FNOS_PORT__ 占位符替换为实际 fnOS 服务端口
+if [ -f "$UI_RUNTIME_DIR/fnos-patch.js" ]; then
+    sed -i.bak "s|__FNOS_PORT__|${TRIM_SERVICE_PORT}|g" "$UI_RUNTIME_DIR/fnos-patch.js"
+    rm -f "$UI_RUNTIME_DIR/fnos-patch.js.bak"
 fi
 
 log_msg() {
