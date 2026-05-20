@@ -1,5 +1,11 @@
 ## 2026-05-21
 
+- 主面板新增「最终配置文件」展示卡片, 可一键复制, 折叠/展开
+- 用户可直接查看 dashboard 写入 mihomo 的 yaml 全文 (含 fnOS 旁路由覆盖与订阅源 proxy-providers)
+- bump fnos-mihomo-dashboard 至 v0.1.5
+
+## 2026-05-21
+
 - 新增 fnOS 旁路由配置覆盖功能 (基于 mihomo 实战笔记):
   - 强制 profile.store-selected + store-fake-ip (重启保留选择)
   - 自动启用 TLS/HTTP/QUIC Sniffer (透明代理规则匹配必需, 解决坑14)
