@@ -1,5 +1,12 @@
 ## 2026-05-21
 
+- v0.2.1: 自测修复
+  - 保存订阅前预验证 URL: 拒绝 HTML 页面 (如 example.com 误填) / 4xx / 空响应 / 非 yaml 内容
+  - 自测确认: 错误 URL 立即返回 400, 正确 URL 通过验证并被 mihomo 加载
+- bump fnos-mihomo-dashboard 至 v0.2.1
+
+## 2026-05-21
+
 - v0.2.0: 三项关键安全/自动化能力
   - **配置回滚**: 保存订阅时先备份, mihomo reload 失败自动回滚, 不再因配置错误失联
   - **订阅自动刷新**: 后台 ticker 默认每 12 小时刷新订阅 (proxy-provider + subscription-userinfo)
