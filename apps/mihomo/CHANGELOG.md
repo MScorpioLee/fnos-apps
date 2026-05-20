@@ -1,5 +1,13 @@
 ## 2026-05-21
 
+- v0.2.0: 三项关键安全/自动化能力
+  - **配置回滚**: 保存订阅时先备份, mihomo reload 失败自动回滚, 不再因配置错误失联
+  - **订阅自动刷新**: 后台 ticker 默认每 12 小时刷新订阅 (proxy-provider + subscription-userinfo)
+  - **流量/到期信息**: 解析机场返回的 subscription-userinfo 头, 主面板展示已用流量与剩余天数, 含「立即更新订阅」按钮
+- bump fnos-mihomo-dashboard 至 v0.2.0
+
+## 2026-05-21
+
 - 主面板新增「最终配置文件」展示卡片, 可一键复制, 折叠/展开
 - 用户可直接查看 dashboard 写入 mihomo 的 yaml 全文 (含 fnOS 旁路由覆盖与订阅源 proxy-providers)
 - bump fnos-mihomo-dashboard 至 v0.1.5
