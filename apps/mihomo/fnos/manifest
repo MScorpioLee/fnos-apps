@@ -1,0 +1,14 @@
+appname         = mihomo
+version         = 0.0.0
+display_name    = Mihomo
+platform        = x86
+maintainer      = MetaCubeX
+maintainer_url  = https://github.com/MetaCubeX/mihomo
+distributor     = conversun
+distributor_url = https://github.com/conversun/fnos-apps
+desktop_uidir   = ui
+desktop_applaunchname = mihomo.Application
+service_port    = 9097
+desc            = Mihomo (Clash.Meta) 多协议代理内核，内置 MetaCubeXD 可视化面板
+source          = thirdparty
+checksum        = 

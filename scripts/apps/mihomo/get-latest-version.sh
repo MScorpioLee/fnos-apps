@@ -1,0 +1,24 @@
+#!/bin/bash
+set -euo pipefail
+
+INPUT_VERSION="${1:-}"
+
+TAG=$(curl -sL "https://api.github.com/repos/MetaCubeX/mihomo/releases/latest" | \
+  jq -r '.tag_name')
+
+if [ -n "$INPUT_VERSION" ]; then
+  VERSION="$INPUT_VERSION"
+else
+  VERSION=$(echo "$TAG" | sed 's/^v//')
+fi
+
+if [ -z "$VERSION" ] || [ "$VERSION" = "null" ]; then
+  echo "Failed to resolve version for mihomo" >&2
+  exit 1
+fi
+
+echo "VERSION=$VERSION"
+
+if [ -n "${GITHUB_OUTPUT:-}" ]; then
+  echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+fi
