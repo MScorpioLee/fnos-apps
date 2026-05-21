@@ -1,6 +1,6 @@
 services:
   ente:
-    image: ${DOCKER_MIRROR}ghcr.io/ente-io/server:${VERSION}
+    image: ${DOCKER_MIRROR}ghcr.io/ente-io/server:latest
     container_name: ente
     depends_on:
       - ente-db
