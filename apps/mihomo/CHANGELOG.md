@@ -1,5 +1,12 @@
 ## 2026-05-21
 
+- v0.3.1: tun.enable 默认改为 true (旁路网关安装就是为了透明代理 LAN, 默认关闭违反核心场景)
+  - 安装时 setcap 已授权, 默认开 TUN 立即可用
+  - 用户不需要的话可在 MetaCubeXD 关闭
+- bump fnos-mihomo-dashboard 至 v0.3.1
+
+## 2026-05-21
+
 - v0.3.0: dashboard 主动解析订阅 yaml, 抽取 proxies 写本地文件
   - 修复: 真实机场订阅 URL 返回完整 Clash 配置 (含 proxy-groups/rules), mihomo proxy-providers 只接受纯 proxies 列表, 导致 PROXY 组始终为空 / 节点没生效
   - dashboard 现在 GET URL → parse yaml → 抽 proxies → 写本地 providers/fnos-subscription.yaml → mihomo 用 type: file 引用
