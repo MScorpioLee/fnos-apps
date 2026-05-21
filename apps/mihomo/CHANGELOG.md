@@ -1,5 +1,13 @@
 ## 2026-05-21
 
+- v0.3.0: dashboard 主动解析订阅 yaml, 抽取 proxies 写本地文件
+  - 修复: 真实机场订阅 URL 返回完整 Clash 配置 (含 proxy-groups/rules), mihomo proxy-providers 只接受纯 proxies 列表, 导致 PROXY 组始终为空 / 节点没生效
+  - dashboard 现在 GET URL → parse yaml → 抽 proxies → 写本地 providers/fnos-subscription.yaml → mihomo 用 type: file 引用
+  - 兼容两种 URL 格式: 纯 proxies yaml 与完整 Clash yaml
+- bump fnos-mihomo-dashboard 至 v0.3.0
+
+## 2026-05-21
+
 - 主面板改用 shadcn 风格设计 token + 自动 light/dark 主题
   - 完整 shadcn 配色变量 (--background / --card / --primary / --muted 等), 浅/深两套
   - 右上角三态切换器: 自动 (跟随 fnOS / 系统) / 浅 / 深, localStorage 持久化
