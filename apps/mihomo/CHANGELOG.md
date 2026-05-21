@@ -1,5 +1,14 @@
 ## 2026-05-21
 
+- v0.3.5: 三项 UI 反馈修复
+  - 轮询拆分: status/logs 5s, config/subInfo 60s, subscription URL/overrides 启动时一次, 后台流量大幅下降
+  - dashboard 头部新增 mihomo 启停开关 (绿色"运行中" / 灰色"已停止"), 不再需要去 fnOS 应用中心停用
+  - 高级管理 (MetaCubeXD) 改为新窗口打开 (target=_blank), 不再替换主 dashboard
+- 架构: bin/mihomo-server 简化为仅 exec dashboard, mihomo 由 dashboard supervisor 接管 (start/stop/restart API)
+- bump fnos-mihomo-dashboard 至 v0.3.5
+
+## 2026-05-21
+
 - 修复 TUN `configure tun interface: operation not permitted` 错误
   - 根因: fnOS 文件系统 (vol1/@appcenter) 不支持 file capabilities, setcap 静默失败 (之前 log 已有 WARN), mihomo 以 mihomo user 跑无 CAP_NET_ADMIN
   - 改 config/privilege "run-as" 从 "package" 改为 "root", mihomo 直接以 root 跑获得 TUN 所需权限
