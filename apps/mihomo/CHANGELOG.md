@@ -1,5 +1,12 @@
 ## 2026-05-21
 
+- 修复 fnOS 内嵌窗口加载 dashboard 后 tailwind.min.js / alpine.min.js 报 404
+  - 根因: ui/config 的 url 字段仍是遗留的 "/ui/" (metacubexd-only 时代), 浏览器把相对路径解析为 /ui/* 但 dashboard 根目录在 /
+  - 改为 url: "/" (dashboard 主面板根)
+  - MetaCubeXD 仍在 dashboard 内部的 /clash/ 子路径可用
+
+## 2026-05-21
+
 - 修复 r5 在国内 NAS 加载空白 / 无数据 / 无法订阅: dashboard 内嵌 Alpine.js + Tailwind, 彻底去掉对 cdn.tailwindcss.com + unpkg.com 的依赖
 - ui/config type 改为 "iframe": fnOS 应用中心点击图标改为**内嵌窗口**打开, 不再新开浏览器 tab (参考 fnos-apps-store 同款配置)
 - bump fnos-mihomo-dashboard 至 v0.2.3

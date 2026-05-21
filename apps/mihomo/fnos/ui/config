@@ -8,7 +8,7 @@
             "type": "iframe",
             "port": "9097",
             "protocol": "http",
-            "url": "/ui/",
+            "url": "/",
             "allUsers": true
         }
     }
