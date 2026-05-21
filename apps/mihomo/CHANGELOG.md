@@ -1,5 +1,13 @@
 ## 2026-05-21
 
+- 主面板改用 shadcn 风格设计 token + 自动 light/dark 主题
+  - 完整 shadcn 配色变量 (--background / --card / --primary / --muted 等), 浅/深两套
+  - 右上角三态切换器: 自动 (跟随 fnOS / 系统) / 浅 / 深, localStorage 持久化
+  - 所有原始颜色 (bg-gray-/bg-white/text-blue-) 替换为语义 token (bg-card/text-muted-foreground/...)
+- bump fnos-mihomo-dashboard 至 v0.2.4
+
+## 2026-05-21
+
 - 修复 fnOS 内嵌窗口加载 dashboard 后 tailwind.min.js / alpine.min.js 报 404
   - 根因: ui/config 的 url 字段仍是遗留的 "/ui/" (metacubexd-only 时代), 浏览器把相对路径解析为 /ui/* 但 dashboard 根目录在 /
   - 改为 url: "/" (dashboard 主面板根)
