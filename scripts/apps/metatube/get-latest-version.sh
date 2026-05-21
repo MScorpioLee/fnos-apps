@@ -1,0 +1,24 @@
+#!/bin/bash
+set -euo pipefail
+
+INPUT_VERSION="${1:-}"
+
+# Binaries are cross-posted to metatube-server-releases via GitHub Actions;
+# the SDK repo (metatube-community/metatube-sdk-go) holds the tags but the
+# release artifacts live in metatube-community/metatube-server-releases.
+TAG=$(curl -sL "https://api.github.com/repos/metatube-community/metatube-server-releases/releases/latest" | \
+  jq -r '.tag_name')
+
+if [ -n "$INPUT_VERSION" ]; then
+  VERSION="$INPUT_VERSION"
+else
+  VERSION=$(echo "$TAG" | sed 's/^v//')
+fi
+
+[ -z "$VERSION" ] || [ "$VERSION" = "null" ] && { echo "Failed to resolve version for metatube" >&2; exit 1; }
+
+echo "VERSION=$VERSION"
+
+if [ -n "${GITHUB_OUTPUT:-}" ]; then
+  echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+fi

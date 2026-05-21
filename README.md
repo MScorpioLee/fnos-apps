@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-120-2ea44f)
+![Apps](https://img.shields.io/badge/apps-121-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。自动跟踪上游版本，构建可直接安装的 `.fpk` 包。
@@ -45,6 +45,7 @@
 | <img src="apps/immich/fnos/ICON.PNG" width="28"> | **Immich** | `2283` | 自托管照片/视频备份，支持人脸识别 | [GitHub](https://github.com/immich-app/immich) | [Release][r-immich] |
 | <img src="apps/kavita/fnos/ICON.PNG" width="28"> | **Kavita** | `5000` | 漫画/电子书阅读 | [GitHub](https://github.com/Kareadita/Kavita) | [Release][r-kavita] |
 | <img src="apps/tinymediamanager/fnos/ICON.PNG" width="28"> | **tinyMediaManager** | `5800` | 影视元数据管理 | [官网](https://www.tinymediamanager.org) | [Release][r-tmm] |
+| <img src="apps/metatube/fnos/ICON.PNG" width="28"> | **MetaTube** | `8091` | JAV 元数据刮削服务器，搭配 Emby/Jellyfin 使用，内置 20+ 数据源 | [GitHub](https://github.com/metatube-community/metatube-sdk-go) | [Release][r-metatube] |
 | <img src="apps/photoprism/fnos/ICON.PNG" width="28"> | **PhotoPrism** | `2342` | AI 驱动的照片管理 | [官网](https://photoprism.app) | [Release][r-photoprism] |
 | <img src="apps/jellyseerr/fnos/ICON.PNG" width="28"> | **Jellyseerr** | `5055` | Jellyfin/Plex 媒体请求管理 | [GitHub](https://github.com/Fallenbagel/jellyseerr) | [Release][r-jellyseerr] |
 | <img src="apps/tautulli/fnos/ICON.PNG" width="28"> | **Tautulli** | `8181` | Plex 使用统计与监控 | [官网](https://tautulli.com) | [Release][r-tautulli] |
@@ -253,6 +254,7 @@ fnos-apps/
 [r-emby]: https://github.com/conversun/fnos-apps/releases?q=emby
 [r-jellyfin]: https://github.com/conversun/fnos-apps/releases?q=jellyfin
 [r-navidrome]: https://github.com/conversun/fnos-apps/releases?q=navidrome
+[r-metatube]: https://github.com/conversun/fnos-apps/releases?q=metatube
 [r-kavita]: https://github.com/conversun/fnos-apps/releases?q=kavita
 [r-tmm]: https://github.com/conversun/fnos-apps/releases?q=tinymediamanager
 [r-qb]: https://github.com/conversun/fnos-apps/releases?q=qbittorrent
