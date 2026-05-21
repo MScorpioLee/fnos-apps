@@ -15,6 +15,13 @@ APP_HELP_VERSION_EXAMPLE="1.19.25"
 
 # fnos-mihomo-dashboard release (independent versioning from mihomo)
 DASHBOARD_REPO="conversun/fnos-mihomo-dashboard"
+# Dashboard version priority: env > scripts/apps/mihomo/meta.env > GH API latest
+if [ -z "${DASHBOARD_VERSION:-}" ]; then
+    META_ENV="$REPO_ROOT/scripts/apps/mihomo/meta.env"
+    if [ -f "$META_ENV" ]; then
+        DASHBOARD_VERSION=$(grep '^DASHBOARD_VERSION=' "$META_ENV" | head -1 | cut -d= -f2- | tr -d '"' | tr -d "'" || true)
+    fi
+fi
 DASHBOARD_VERSION="${DASHBOARD_VERSION:-latest}"
 
 app_set_arch_vars() {

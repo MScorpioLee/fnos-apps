@@ -3,12 +3,16 @@ set -euo pipefail
 
 VERSION="${VERSION:-}"
 TARBALL_ARCH="${TARBALL_ARCH:-${DEB_ARCH:-amd64}}"
-DASHBOARD_VERSION="${DASHBOARD_VERSION:-}"
 DASHBOARD_REPO="conversun/fnos-mihomo-dashboard"
 
 [ -z "$VERSION" ] && { echo "VERSION is required" >&2; exit 1; }
 
-if [ -z "$DASHBOARD_VERSION" ]; then
+# Resolve dashboard version: env > meta.env pinned > GH API latest
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ -z "${DASHBOARD_VERSION:-}" ] && [ -f "$SCRIPT_DIR/meta.env" ]; then
+    DASHBOARD_VERSION=$(grep '^DASHBOARD_VERSION=' "$SCRIPT_DIR/meta.env" | head -1 | cut -d= -f2- | tr -d '"' | tr -d "'" || true)
+fi
+if [ -z "${DASHBOARD_VERSION:-}" ]; then
     DASHBOARD_VERSION=$(curl -sL "https://api.github.com/repos/${DASHBOARD_REPO}/releases/latest" | \
         grep '"tag_name":' | sed -E 's/.*"(v?[^"]+)".*/\1/')
 fi
