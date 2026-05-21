@@ -1,5 +1,18 @@
 ## 2026-05-21
 
+- v0.3.4: UI 优化 v2 (基于实机截图反馈)
+  - 顶部 logo 徽章 + 主题切换器升级为 icon segmented control (☀/🖥/🌙)
+  - 状态栏从 2 列扩展为 3 列 (内核 / 连接 + 心跳脉冲 / 订阅流量摘要)
+  - 所有 section 加 lucide 风格 inline SVG icon (link/shield/file/terminal)
+  - 订阅 URL 输入框加链接 icon 前缀
+  - 保存按钮 / 复制 / 刷新加状态图标 + spinner
+  - fnOS 覆盖项改为 success-tinted check chip + code key row
+  - config + 日志使用 dark code block (两种模式下都用同款配色)
+  - 加 footer 显示项目链接
+- bump fnos-mihomo-dashboard 至 v0.3.4
+
+## 2026-05-21
+
 - v0.3.3: 修复 TUN 启动错误 `iptables: executable file not found in $PATH`
   - fnOS 系统使用 nftables, mihomo auto-redirect 调 iptables 失败
   - tun.auto-redirect 默认改为 false (仅在 NAS 当 LAN 旁路网关时才需要, NAS 自身应用透明代理不需要)
