@@ -1,5 +1,11 @@
 ## 2026-05-21
 
+- 修复 r5 在国内 NAS 加载空白 / 无数据 / 无法订阅: dashboard 内嵌 Alpine.js + Tailwind, 彻底去掉对 cdn.tailwindcss.com + unpkg.com 的依赖
+- ui/config type 改为 "iframe": fnOS 应用中心点击图标改为**内嵌窗口**打开, 不再新开浏览器 tab (参考 fnos-apps-store 同款配置)
+- bump fnos-mihomo-dashboard 至 v0.2.3
+
+## 2026-05-21
+
 - v0.2.2: 嵌入 Mozilla CA 证书包, dashboard 在无 ca-certificates 的极简 Linux 环境 (容器) 也能完成 HTTPS 订阅验证 / 拉取
 - 端到端自测覆盖: bad URL 拒绝 / 合法 URL 接受 / 备份文件 / 订阅信息 / 覆盖应用 / refresh
 - bump fnos-mihomo-dashboard 至 v0.2.2
