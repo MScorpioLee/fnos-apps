@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-30T09:01:51Z",
+  "generated_at": "2026-06-30T09:02:25Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -1740,9 +1740,9 @@
       "file_prefix": "nvidia-driver",
       "display_name": "NVIDIA Driver",
       "description": "NVIDIA GPU 驱动程序（R580 LTS）与容器工具包，支持 Docker GPU 直通和硬件转码。安装后请重启 NAS 以确保内核模块开机自动加载、飞牛系统服务重新识别 GPU。",
-      "version": "580.159.04",
-      "fpk_version": "580.159.04-r1",
-      "release_tag": "nvidia-driver/v580.159.04-r1",
+      "version": "580.167.08",
+      "fpk_version": "580.167.08",
+      "release_tag": "nvidia-driver/v580.167.08",
       "service_port": 0,
       "homepage_url": "https://www.nvidia.com/drivers",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nvidia-driver/fnos/ICON_256.PNG",
@@ -1750,7 +1750,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-24T18:55:42Z",
+      "updated_at": "2026-06-30T09:02:10Z",
       "download_count": 438,
       "app_type": "native",
       "category": "system"
