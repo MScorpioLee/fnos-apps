@@ -4,10 +4,10 @@
       "name": "hermes-studio",
       "display_name": "Hermes Studio",
       "description": "自托管 AI 聊天与 Hermes Agent 工作台，内置 Node.js、Python 和 Hermes Agent 运行环境。",
-      "source_url": "https://github.com/MScorpioLee/hermes-studio/releases/tag/fnos-v0.6.26",
+      "source_url": "https://github.com/MScorpioLee/hermes-studio/releases/tag/fnos-v0.6.27",
       "github_repo": "MScorpioLee/hermes-studio",
-      "latest_version": "0.6.26",
-      "updated_at": "2026-07-01T03:55:08Z"
+      "latest_version": "0.6.27",
+      "updated_at": "2026-07-01T04:13:40Z"
     },
     {
       "name": "peerbanhelper",
