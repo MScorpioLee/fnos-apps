@@ -6,8 +6,8 @@
       "description": "自托管 AI 聊天与 Hermes Agent 工作台，内置 Node.js、Python 和 Hermes Agent 运行环境。",
       "source_url": "https://github.com/MScorpioLee/hermes-studio/releases/tag/fnos-v0.6.27",
       "github_repo": "MScorpioLee/hermes-studio",
-      "latest_version": "0.6.27",
-      "updated_at": "2026-07-01T04:13:40Z"
+      "latest_version": "fnos-v0.6.29",
+      "updated_at": "2026-07-01T06:47:49Z"
     },
     {
       "name": "peerbanhelper",
@@ -78,8 +78,8 @@
       "description": "Grafana 官方数据采集代理，收集日志、指标和链路追踪数据",
       "source_url": "https://github.com/jianyun8023/fnos-alloy/releases",
       "github_repo": "jianyun8023/fnos-alloy",
-      "latest_version": "1.17.0",
-      "updated_at": "2026-06-12T22:04:05Z"
+      "latest_version": "1.17.1",
+      "updated_at": "2026-06-30T22:00:09Z"
     },
     {
       "name": "scrutiny-collector",
