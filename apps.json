@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-30T09:02:41Z",
+  "generated_at": "2026-07-01T03:55:08Z",
   "source": {
-    "name": "conversun/fnos-apps",
-    "url": "https://github.com/conversun/fnos-apps"
+    "name": "MScorpioLee/fnos-apps",
+    "url": "https://github.com/MScorpioLee/fnos-apps"
   },
   "apps": [
     {
@@ -826,6 +826,31 @@
       "download_count": 48,
       "app_type": "native",
       "category": "network"
+    },
+    {
+      "slug": "hermes-studio",
+      "appname": "hermes-studio",
+      "file_prefix": "hermes-studio",
+      "display_name": "Hermes Studio",
+      "description": "自托管 AI 聊天与 Hermes Agent 工作台，内置 Node.js、Python 和 Hermes Agent 运行环境。",
+      "version": "0.6.26",
+      "fpk_version": "0.6.26",
+      "release_tag": "fnos-v0.6.26",
+      "service_port": 6060,
+      "homepage_url": "https://github.com/MScorpioLee/hermes-studio",
+      "icon_url": "https://raw.githubusercontent.com/MScorpioLee/hermes-studio/main/fnos/hermes-studio/ICON_256.PNG",
+      "download_url": "https://github.com/MScorpioLee/hermes-studio/releases/download/fnos-v0.6.26/hermes-studio.fpk",
+      "release_url": "https://github.com/MScorpioLee/hermes-studio/releases/tag/fnos-v0.6.26",
+      "gateway_prefix": "/app/hermes-studio",
+      "gateway_socket": "hermes-studio.sock",
+      "platforms": [
+        "x86"
+      ],
+      "updated_at": "2026-07-01T03:55:08Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "ai",
+      "post_install_note": "默认登录名：admin，默认密码：123456。安装后请先修改默认账户密码。"
     },
     {
       "slug": "homarr",
