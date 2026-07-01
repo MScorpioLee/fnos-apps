@@ -1,0 +1,211 @@
+name: Publish External FPK Release
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      app:
+        description: 'App slug from apps.json, e.g. hermes-studio'
+        required: true
+        default: 'hermes-studio'
+        type: string
+      version:
+        description: 'Version override. Leave empty to use apps.json fpk_version/version.'
+        required: false
+        default: ''
+        type: string
+      revision:
+        description: 'Revision suffix, e.g. r2. Leave empty for base tag or next auto revision.'
+        required: false
+        default: ''
+        type: string
+      platform:
+        description: 'FPK platform suffix for the copied asset.'
+        required: false
+        default: 'x86'
+        type: choice
+        options:
+          - x86
+          - arm
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve external app metadata
+        id: app
+        env:
+          INPUT_APP: ${{ inputs.app }}
+          INPUT_VERSION: ${{ inputs.version }}
+          INPUT_PLATFORM: ${{ inputs.platform }}
+        run: |
+          set -euo pipefail
+
+          APP_JSON=$(jq -c --arg app "$INPUT_APP" '
+            .apps[]
+            | select(.slug == $app or .appname == $app)
+          ' apps.json | head -1)
+
+          if [ -z "$APP_JSON" ]; then
+            echo "::error::App '$INPUT_APP' not found in apps.json"
+            exit 1
+          fi
+
+          DOWNLOAD_URL=$(jq -r '.download_url // ""' <<< "$APP_JSON")
+          if [ -z "$DOWNLOAD_URL" ] || [ "$DOWNLOAD_URL" = "null" ]; then
+            echo "::error::App '$INPUT_APP' has no explicit download_url. Use Build fnOS App Packages for buildable apps."
+            exit 1
+          fi
+
+          SLUG=$(jq -r '.slug // .appname' <<< "$APP_JSON")
+          APPNAME=$(jq -r '.appname // .slug' <<< "$APP_JSON")
+          FILE_PREFIX=$(jq -r '.file_prefix // .appname // .slug' <<< "$APP_JSON")
+          DISPLAY_NAME=$(jq -r '.display_name // .appname // .slug' <<< "$APP_JSON")
+          DESCRIPTION=$(jq -r '.description // ""' <<< "$APP_JSON")
+          VERSION="${INPUT_VERSION:-$(jq -r '.fpk_version // .version // ""' <<< "$APP_JSON")}"
+          SOURCE_RELEASE_URL=$(jq -r '.release_url // .homepage_url // ""' <<< "$APP_JSON")
+          HOMEPAGE_URL=$(jq -r '.homepage_url // ""' <<< "$APP_JSON")
+          GATEWAY_PREFIX=$(jq -r '.gateway_prefix // ""' <<< "$APP_JSON")
+          GATEWAY_SOCKET=$(jq -r '.gateway_socket // ""' <<< "$APP_JSON")
+
+          if [ -z "$VERSION" ] || [ "$VERSION" = "null" ]; then
+            echo "::error::Unable to resolve version for '$SLUG'"
+            exit 1
+          fi
+
+          ASSET_NAME="${FILE_PREFIX}_${VERSION}_${INPUT_PLATFORM}.fpk"
+
+          {
+            echo "slug=$SLUG"
+            echo "appname=$APPNAME"
+            echo "file_prefix=$FILE_PREFIX"
+            echo "display_name=$DISPLAY_NAME"
+            echo "description=$DESCRIPTION"
+            echo "version=$VERSION"
+            echo "download_url=$DOWNLOAD_URL"
+            echo "source_release_url=$SOURCE_RELEASE_URL"
+            echo "homepage_url=$HOMEPAGE_URL"
+            echo "gateway_prefix=$GATEWAY_PREFIX"
+            echo "gateway_socket=$GATEWAY_SOCKET"
+            echo "asset_name=$ASSET_NAME"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Determine fnOS Apps release tag
+        id: tag
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          bash scripts/ci/resolve-release-tag.sh \
+            "${{ steps.app.outputs.slug }}" \
+            "${{ steps.app.outputs.version }}" \
+            "${{ github.event_name }}" \
+            "${{ inputs.revision }}"
+
+      - name: Download and verify FPK
+        if: steps.tag.outputs.should_build == 'true'
+        env:
+          DOWNLOAD_URL: ${{ steps.app.outputs.download_url }}
+          ASSET_NAME: ${{ steps.app.outputs.asset_name }}
+          APPNAME: ${{ steps.app.outputs.appname }}
+        run: |
+          set -euo pipefail
+
+          curl -fL --retry 3 --retry-delay 5 -o "$ASSET_NAME" "$DOWNLOAD_URL"
+          test -s "$ASSET_NAME"
+          test "$(stat -c%s "$ASSET_NAME")" -gt 10240
+
+          tar -tf "$ASSET_NAME" | grep -qx 'manifest'
+          tar -xOf "$ASSET_NAME" manifest | grep -Eq "^appname[[:space:]]*=[[:space:]]*${APPNAME}$"
+          ls -lh "$ASSET_NAME"
+
+      - name: Create fnOS Apps release
+        if: steps.tag.outputs.should_build == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ steps.tag.outputs.release_tag }}
+          DISPLAY_NAME: ${{ steps.app.outputs.display_name }}
+          DESCRIPTION: ${{ steps.app.outputs.description }}
+          VERSION: ${{ steps.app.outputs.version }}
+          ASSET_NAME: ${{ steps.app.outputs.asset_name }}
+          SOURCE_RELEASE_URL: ${{ steps.app.outputs.source_release_url }}
+          HOMEPAGE_URL: ${{ steps.app.outputs.homepage_url }}
+          GATEWAY_PREFIX: ${{ steps.app.outputs.gateway_prefix }}
+          GATEWAY_SOCKET: ${{ steps.app.outputs.gateway_socket }}
+        run: |
+          set -euo pipefail
+
+          {
+            echo "同步外部 fnOS 安装包"
+            echo ""
+            echo "- 应用: ${DISPLAY_NAME}"
+            echo "- 版本: ${VERSION}"
+            echo "- 来源 Release: ${SOURCE_RELEASE_URL}"
+            echo "- 项目主页: ${HOMEPAGE_URL}"
+            if [ -n "$GATEWAY_PREFIX" ]; then
+              echo "- 飞牛网关路径: ${GATEWAY_PREFIX}"
+            fi
+            if [ -n "$GATEWAY_SOCKET" ]; then
+              echo "- 飞牛网关 Socket: ${GATEWAY_SOCKET}"
+            fi
+            echo ""
+            echo "${DESCRIPTION}"
+          } > release-notes.md
+
+          gh release create "$RELEASE_TAG" \
+            --title "${DISPLAY_NAME} ${VERSION} for fnOS" \
+            --notes-file release-notes.md \
+            "$ASSET_NAME"
+
+      - name: Update apps.json download metadata
+        if: steps.tag.outputs.should_build == 'true'
+        env:
+          SLUG: ${{ steps.app.outputs.slug }}
+          VERSION: ${{ steps.app.outputs.version }}
+          RELEASE_TAG: ${{ steps.tag.outputs.release_tag }}
+          ASSET_NAME: ${{ steps.app.outputs.asset_name }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          RELEASE_URL="https://github.com/${GH_REPO}/releases/tag/${RELEASE_TAG}"
+          DOWNLOAD_URL="https://github.com/${GH_REPO}/releases/download/${RELEASE_TAG}/${ASSET_NAME}"
+          UPDATED_AT=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+          tmp_file=$(mktemp)
+          jq \
+            --arg slug "$SLUG" \
+            --arg version "$VERSION" \
+            --arg release_tag "$RELEASE_TAG" \
+            --arg release_url "$RELEASE_URL" \
+            --arg download_url "$DOWNLOAD_URL" \
+            --arg updated_at "$UPDATED_AT" \
+            '(.apps) |= map(
+              if .slug == $slug then
+                .version = $version
+                | .fpk_version = $version
+                | .release_tag = $release_tag
+                | .release_url = $release_url
+                | .download_url = $download_url
+                | .updated_at = $updated_at
+              else
+                .
+              end
+            )' apps.json > "$tmp_file"
+
+          mv "$tmp_file" apps.json
+
+      - name: Commit apps.json update
+        if: steps.tag.outputs.should_build == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: publish external fpk metadata [skip ci]'
+          file_pattern: apps.json

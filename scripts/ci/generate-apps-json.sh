@@ -4,7 +4,7 @@
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
-REPO="conversun/fnos-apps"
+REPO="${GITHUB_REPOSITORY:-MScorpioLee/fnos-apps}"
 OUTPUT="${REPO_ROOT}/apps.json"
 
 command -v jq >/dev/null 2>&1 || { echo "[ERROR] jq is required" >&2; exit 1; }
@@ -143,6 +143,22 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
   APPS_JSON=$(echo "$APPS_JSON" | jq --argjson app "$app_obj" '. + [$app]')
   echo "  ✓ ${slug} → ${release_tag}"
 done
+
+if [ -n "$EXISTING_APPS_JSON" ]; then
+  EXTERNAL_APPS_JSON=$(jq -n \
+    --argjson existing "$EXISTING_APPS_JSON" \
+    --argjson generated "$APPS_JSON" \
+    '$existing.apps
+      | map(select(.slug as $slug | ($generated | any(.slug == $slug)) | not))')
+  if [ "$(echo "$EXTERNAL_APPS_JSON" | jq 'length')" -gt 0 ]; then
+    echo "Preserving externally released apps from existing apps.json:"
+    echo "$EXTERNAL_APPS_JSON" | jq -r '.[] | "  ✓ \(.slug) → \(.release_tag // .download_url // "external")"'
+    APPS_JSON=$(jq -n \
+      --argjson generated "$APPS_JSON" \
+      --argjson external "$EXTERNAL_APPS_JSON" \
+      '$generated + $external')
+  fi
+fi
 
 APPS_JSON=$(echo "$APPS_JSON" | jq 'sort_by(.slug)')
 
