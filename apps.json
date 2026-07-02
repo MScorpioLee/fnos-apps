@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-02T09:09:13Z",
+  "generated_at": "2026-07-02T09:09:31Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -812,17 +812,17 @@
       "file_prefix": "headscale",
       "display_name": "Headscale",
       "description": "Tailscale 自托管控制服务器，构建私有 VPN 网络。",
-      "version": "0.29.1",
-      "fpk_version": "0.29.1",
-      "release_tag": "headscale/v0.29.1",
+      "version": "0.29.2",
+      "fpk_version": "0.29.2",
+      "release_tag": "headscale/v0.29.2",
       "service_port": 8480,
       "homepage_url": "https://github.com/juanfont/headscale",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/headscale/fnos/ICON_256.PNG",
+      "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/headscale/fnos/ICON_256.PNG",
       "platforms": [
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-19T09:29:38Z",
+      "updated_at": "2026-07-02T09:09:17Z",
       "download_count": 48,
       "app_type": "native",
       "category": "network"
@@ -963,9 +963,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.2151",
-      "fpk_version": "0.24.2151",
-      "release_tag": "jackett/v0.24.2151",
+      "version": "0.24.2158",
+      "fpk_version": "0.24.2158",
+      "release_tag": "jackett/v0.24.2158",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -973,7 +973,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-01T09:13:58Z",
+      "updated_at": "2026-07-02T09:09:15Z",
       "download_count": 111,
       "app_type": "native",
       "category": "automation"
@@ -1996,17 +1996,17 @@
       "file_prefix": "prometheus",
       "display_name": "Prometheus",
       "description": "时序数据库和监控系统，支持灵活的查询语言和告警规则。",
-      "version": "3.12.0",
-      "fpk_version": "3.12.0",
-      "release_tag": "prometheus/v3.12.0",
+      "version": "3.13.0",
+      "fpk_version": "3.13.0",
+      "release_tag": "prometheus/v3.13.0",
       "service_port": 9090,
       "homepage_url": "https://prometheus.io",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/prometheus/fnos/ICON_256.PNG",
+      "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/prometheus/fnos/ICON_256.PNG",
       "platforms": [
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-29T09:02:57Z",
+      "updated_at": "2026-07-02T09:09:20Z",
       "download_count": 37,
       "app_type": "native",
       "category": "system"
