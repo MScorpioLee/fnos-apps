@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-17T08:48:04Z",
+  "generated_at": "2026-07-17T08:48:17Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -644,9 +644,9 @@
       "file_prefix": "forgejo",
       "display_name": "Forgejo",
       "description": "社区驱动的轻量级 Git 代码托管服务器，Gitea 分支。",
-      "version": "15.0.5",
-      "fpk_version": "15.0.5",
-      "release_tag": "forgejo/v15.0.5",
+      "version": "16.0.0",
+      "fpk_version": "16.0.0",
+      "release_tag": "forgejo/v16.0.0",
       "service_port": 3005,
       "homepage_url": "https://codeberg.org/forgejo/forgejo",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/forgejo/fnos/ICON_256.PNG",
@@ -654,7 +654,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-16T08:50:46Z",
+      "updated_at": "2026-07-17T08:48:06Z",
       "download_count": 28,
       "app_type": "native",
       "category": "system"
