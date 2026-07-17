@@ -125,8 +125,15 @@ jobs:
           set +e
           mapfile -t apps < <(echo "$APPS_JSON" | jq -r '.[]')
           echo "Mode: $MODE — checking ${#apps[@]} app(s)"
+          bash scripts/test/gh-api-wrapper.sh
+          GH_API_RC=$?
           bash scripts/test/static-check.sh "${apps[@]}"
-          RC=$?
+          STATIC_RC=$?
+          if [ "$GH_API_RC" -ne 0 ] || [ "$STATIC_RC" -ne 0 ]; then
+            RC=1
+          else
+            RC=0
+          fi
           echo "rc=$RC" >> "$GITHUB_OUTPUT"
           exit 0
 

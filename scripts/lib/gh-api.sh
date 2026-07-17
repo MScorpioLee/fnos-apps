@@ -7,6 +7,8 @@
 # Provides:
 #   gh_curl <url>           - curl with retry, auth, sane timeouts, --fail
 #   gh_latest_tag <repo>    - shortcut for /releases/latest .tag_name
+#   install_github_api_curl_wrapper
+#                            - export a curl wrapper for child bash scripts
 #
 # Why this exists:
 #   The reusable-build-app.yml 'Get Latest Version' step fans out across
@@ -79,4 +81,76 @@ gh_latest_tag() {
 gh_releases() {
     local repo="${1:?gh_releases requires owner/repo}"
     gh_curl "https://api.github.com/repos/${repo}/releases"
+}
+
+_github_api_curl_passthrough() {
+    local args=("$@")
+    local arg next url
+    local has_accept=0
+    local has_api_version=0
+    local has_auth=0
+    local has_user_agent=0
+
+    local i
+    for ((i = 0; i < ${#args[@]}; i++)); do
+        arg="${args[$i]}"
+        next="${args[$((i + 1))]:-}"
+
+        case "$arg" in
+            https://api.github.com/*)
+                url="$arg"
+                ;;
+            --url)
+                if [[ "$next" == https://api.github.com/* ]]; then
+                    url="$next"
+                fi
+                ;;
+            --url=https://api.github.com/*)
+                url="${arg#--url=}"
+                ;;
+            -H|--header)
+                case "$next" in
+                    Accept:*|accept:*) has_accept=1 ;;
+                    Authorization:*|authorization:*) has_auth=1 ;;
+                    User-Agent:*|user-agent:*) has_user_agent=1 ;;
+                    X-GitHub-Api-Version:*|x-github-api-version:*) has_api_version=1 ;;
+                esac
+                ;;
+            -HAccept:*|-Haccept:*) has_accept=1 ;;
+            -HAuthorization:*|-Hauthorization:*) has_auth=1 ;;
+            -HUser-Agent:*|-Huser-agent:*) has_user_agent=1 ;;
+            -HX-GitHub-Api-Version:*|-Hx-github-api-version:*) has_api_version=1 ;;
+        esac
+    done
+
+    if [ -z "${url:-}" ]; then
+        command curl "$@"
+        return
+    fi
+
+    local headers=()
+    [ "$has_accept" -eq 0 ] && headers+=(-H "Accept: application/vnd.github+json")
+    [ "$has_api_version" -eq 0 ] && headers+=(-H "X-GitHub-Api-Version: 2022-11-28")
+    [ "$has_user_agent" -eq 0 ] && headers+=(-H "User-Agent: fnos-apps-ci")
+    if [ -n "${GH_TOKEN:-}" ] && [ "$has_auth" -eq 0 ]; then
+        headers+=(-H "Authorization: Bearer $GH_TOKEN")
+    fi
+
+    command curl --fail \
+         --retry 5 --retry-delay 5 --retry-all-errors \
+         --connect-timeout 30 --max-time 60 \
+         "${headers[@]}" \
+         "$@"
+}
+
+# install_github_api_curl_wrapper
+#   Exports a Bash function named "curl" so child bash scripts that still call
+#   api.github.com directly inherit GH_TOKEN authentication without changing
+#   ordinary non-GitHub downloads.
+install_github_api_curl_wrapper() {
+    curl() {
+        _github_api_curl_passthrough "$@"
+    }
+    export -f _github_api_curl_passthrough
+    export -f curl
 }
