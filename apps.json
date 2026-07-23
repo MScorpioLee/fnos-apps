@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-23T08:57:27Z",
+  "generated_at": "2026-07-23T08:58:01Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -2017,17 +2017,17 @@
       "file_prefix": "prowlarr",
       "display_name": "Prowlarr",
       "description": "索引器管理工具，集中管理和同步 Sonarr/Radarr 等应用的索引器",
-      "version": "2.4.0.5397",
-      "fpk_version": "2.4.0.5397",
-      "release_tag": "prowlarr/v2.4.0.5397",
+      "version": "2.5.2.5491",
+      "fpk_version": "2.5.2.5491",
+      "release_tag": "prowlarr/v2.5.2.5491",
       "service_port": 9696,
       "homepage_url": "https://prowlarr.com",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/prowlarr/fnos/ICON_256.PNG",
+      "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/prowlarr/fnos/ICON_256.PNG",
       "platforms": [
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-10T09:08:36Z",
+      "updated_at": "2026-07-23T08:57:36Z",
       "download_count": 423,
       "app_type": "native",
       "category": "automation"
