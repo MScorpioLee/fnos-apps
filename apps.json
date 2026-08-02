@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-01T08:50:51Z",
+  "generated_at": "2026-08-02T08:51:26Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -538,9 +538,9 @@
       "file_prefix": "ente",
       "display_name": "Ente",
       "description": "端到端加密照片备份和存储服务，Google Photos 的隐私替代方案。",
-      "version": "latest-2026.08.01",
-      "fpk_version": "latest-2026.08.01",
-      "release_tag": "ente/vlatest-2026.08.01",
+      "version": "latest-2026.08.02",
+      "fpk_version": "latest-2026.08.02",
+      "release_tag": "ente/vlatest-2026.08.02",
       "service_port": 8510,
       "homepage_url": "https://ente.io",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/ente/fnos/ICON_256.PNG",
@@ -548,7 +548,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-01T08:50:21Z",
+      "updated_at": "2026-08-02T08:51:05Z",
       "download_count": 60,
       "app_type": "docker",
       "category": "media",
@@ -963,9 +963,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.2307",
-      "fpk_version": "0.24.2307",
-      "release_tag": "jackett/v0.24.2307",
+      "version": "0.24.2315",
+      "fpk_version": "0.24.2315",
+      "release_tag": "jackett/v0.24.2315",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -973,7 +973,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-01T08:50:32Z",
+      "updated_at": "2026-08-02T08:51:24Z",
       "download_count": 111,
       "app_type": "native",
       "category": "automation"
@@ -1870,9 +1870,9 @@
       "file_prefix": "paperless-ngx",
       "display_name": "Paperless-ngx",
       "description": "文档 OCR 扫描与归档管理系统，将纸质文件数字化并智能分类",
-      "version": "3.0.4",
-      "fpk_version": "3.0.4",
-      "release_tag": "paperless-ngx/v3.0.4",
+      "version": "3.0.5",
+      "fpk_version": "3.0.5",
+      "release_tag": "paperless-ngx/v3.0.5",
       "service_port": 8000,
       "homepage_url": "https://docs.paperless-ngx.com",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/paperless-ngx/fnos/ICON_256.PNG",
@@ -1880,7 +1880,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-28T09:00:25Z",
+      "updated_at": "2026-08-02T08:51:01Z",
       "download_count": 86,
       "app_type": "docker",
       "category": "content"
@@ -2522,17 +2522,17 @@
       "file_prefix": "uptime-kuma",
       "display_name": "Uptime Kuma",
       "description": "简洁美观的服务监控工具，支持多种监控类型和告警通知",
-      "version": "2.4.0",
-      "fpk_version": "2.4.0",
-      "release_tag": "uptime-kuma/v2.4.0",
+      "version": "2.5.0",
+      "fpk_version": "2.5.0",
+      "release_tag": "uptime-kuma/v2.5.0",
       "service_port": 3001,
       "homepage_url": "https://github.com/louislam/uptime-kuma",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/uptime-kuma/fnos/ICON_256.PNG",
+      "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/uptime-kuma/fnos/ICON_256.PNG",
       "platforms": [
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-31T08:58:26Z",
+      "updated_at": "2026-08-02T08:51:09Z",
       "download_count": 46,
       "app_type": "docker",
       "category": "system"
