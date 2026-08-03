@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-03T09:17:55Z",
+  "generated_at": "2026-08-03T09:18:49Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -989,12 +989,12 @@
       "release_tag": "jellyfin/v10.11.11",
       "service_port": 8097,
       "homepage_url": "https://jellyfin.org",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jellyfin/fnos/ICON_256.PNG",
+      "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/jellyfin/fnos/ICON_256.PNG",
       "platforms": [
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-07T09:00:22Z",
+      "updated_at": "2026-08-03T09:18:29Z",
       "download_count": 751,
       "app_type": "native",
       "category": "media"
@@ -1432,12 +1432,12 @@
       "release_tag": "metatube/v1.4.0",
       "service_port": 8091,
       "homepage_url": "https://github.com/metatube-community/metatube-sdk-go",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/metatube/fnos/ICON_256.PNG",
+      "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/metatube/fnos/ICON_256.PNG",
       "platforms": [
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-21T05:36:34Z",
+      "updated_at": "2026-08-03T09:18:01Z",
       "download_count": 288,
       "app_type": "native",
       "category": "media"
@@ -2669,9 +2669,9 @@
       "file_prefix": "zeroclaw",
       "display_name": "ZeroClaw",
       "description": "轻量级 AI 智能体运行时，Rust 编写，<5MB 内存占用，支持多模型多通道自主智能体工作流",
-      "version": "0.8.3",
-      "fpk_version": "0.8.3",
-      "release_tag": "zeroclaw/v0.8.3",
+      "version": "0.8.4",
+      "fpk_version": "0.8.4",
+      "release_tag": "zeroclaw/v0.8.4",
       "service_port": 42617,
       "homepage_url": "https://github.com/zeroclaw-labs/zeroclaw",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/zeroclaw/fnos/ICON_256.PNG",
@@ -2679,7 +2679,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-16T08:50:45Z",
+      "updated_at": "2026-08-03T09:18:12Z",
       "download_count": 129,
       "app_type": "native",
       "category": "ai"
