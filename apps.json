@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-19T08:15:24Z",
+  "generated_at": "2026-08-19T08:17:55Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -1343,9 +1343,9 @@
       "file_prefix": "mealie",
       "display_name": "Mealie",
       "description": "自托管食谱管理工具，支持网页导入和家庭共享",
-      "version": "3.22.0",
-      "fpk_version": "3.22.0",
-      "release_tag": "mealie/v3.22.0",
+      "version": "3.23.1",
+      "fpk_version": "3.23.1",
+      "release_tag": "mealie/v3.23.1",
       "service_port": 9925,
       "homepage_url": "https://mealie.io",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/mealie/fnos/ICON_256.PNG",
@@ -1353,7 +1353,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-28T09:00:19Z",
+      "updated_at": "2026-08-19T08:17:43Z",
       "download_count": 43,
       "app_type": "docker",
       "category": "content"
