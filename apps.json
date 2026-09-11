@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-11T08:16:43Z",
+  "generated_at": "2026-09-11T08:17:16Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -644,9 +644,9 @@
       "file_prefix": "forgejo",
       "display_name": "Forgejo",
       "description": "社区驱动的轻量级 Git 代码托管服务器，Gitea 分支。",
-      "version": "16.0.3",
-      "fpk_version": "16.0.3",
-      "release_tag": "forgejo/v16.0.3",
+      "version": "16.0.4",
+      "fpk_version": "16.0.4",
+      "release_tag": "forgejo/v16.0.4",
       "service_port": 3005,
       "homepage_url": "https://codeberg.org/forgejo/forgejo",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/forgejo/fnos/ICON_256.PNG",
@@ -654,7 +654,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-21T08:16:00Z",
+      "updated_at": "2026-09-11T08:16:44Z",
       "download_count": 28,
       "app_type": "native",
       "category": "system"
@@ -1975,9 +1975,9 @@
       "file_prefix": "plexmediaserver",
       "display_name": "Plex",
       "description": "Plex Media Server是一款强大的媒体服务器软件，可以管理和串流您的电影、电视剧、音乐和照片到任何设备。支持硬件转码、离线同步等高级功能。",
-      "version": "1.43.3.10896",
-      "fpk_version": "1.43.3.10896",
-      "release_tag": "plex/v1.43.3.10896",
+      "version": "1.43.4.10903",
+      "fpk_version": "1.43.4.10903",
+      "release_tag": "plex/v1.43.4.10903",
       "service_port": 32400,
       "homepage_url": "https://www.plex.tv/media-server-downloads/",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/plex/fnos/ICON_256.PNG",
@@ -1985,7 +1985,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-19T08:13:31Z",
+      "updated_at": "2026-09-11T08:16:49Z",
       "download_count": 858,
       "app_type": "native",
       "category": "media"
