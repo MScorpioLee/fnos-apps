@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T08:17:16Z",
+  "generated_at": "2026-09-15T08:17:33Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -963,9 +963,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.2586",
-      "fpk_version": "0.24.2586",
-      "release_tag": "jackett/v0.24.2586",
+      "version": "0.24.2595",
+      "fpk_version": "0.24.2595",
+      "release_tag": "jackett/v0.24.2595",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -973,7 +973,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-14T08:19:05Z",
+      "updated_at": "2026-09-15T08:17:16Z",
       "download_count": 111,
       "app_type": "native",
       "category": "automation"
@@ -1448,9 +1448,9 @@
       "file_prefix": "mihomo",
       "display_name": "Mihomo",
       "description": "Clash.Meta 多协议代理 + MetaCubeXD 面板 (管理:9097 代理:7890)",
-      "version": "1.19.30",
-      "fpk_version": "1.19.30",
-      "release_tag": "mihomo/v1.19.30",
+      "version": "1.19.31",
+      "fpk_version": "1.19.31",
+      "release_tag": "mihomo/v1.19.31",
       "service_port": 9097,
       "homepage_url": "https://github.com/MetaCubeX/mihomo",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/mihomo/fnos/ICON_256.PNG",
@@ -1458,7 +1458,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-17T08:16:52Z",
+      "updated_at": "2026-09-15T08:17:14Z",
       "download_count": 858,
       "app_type": "native",
       "category": "network"
