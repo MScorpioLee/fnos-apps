@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T08:18:01Z",
+  "generated_at": "2026-09-17T08:18:34Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -900,9 +900,9 @@
       "file_prefix": "homepage",
       "display_name": "Homepage",
       "description": "高度可定制的应用仪表盘，支持 100+ 服务集成",
-      "version": "2.3.0",
-      "fpk_version": "2.3.0",
-      "release_tag": "homepage/v2.3.0",
+      "version": "2.4.0",
+      "fpk_version": "2.4.0",
+      "release_tag": "homepage/v2.4.0",
       "service_port": 3003,
       "homepage_url": "https://gethomepage.dev",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/homepage/fnos/ICON_256.PNG",
@@ -910,7 +910,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-10T08:16:31Z",
+      "updated_at": "2026-09-17T08:18:16Z",
       "download_count": 96,
       "app_type": "docker",
       "category": "system"
@@ -2017,9 +2017,9 @@
       "file_prefix": "prowlarr",
       "display_name": "Prowlarr",
       "description": "索引器管理工具，集中管理和同步 Sonarr/Radarr 等应用的索引器",
-      "version": "2.5.2.5491",
-      "fpk_version": "2.5.2.5491",
-      "release_tag": "prowlarr/v2.5.2.5491",
+      "version": "2.6.5.5623",
+      "fpk_version": "2.6.5.5623",
+      "release_tag": "prowlarr/v2.6.5.5623",
       "service_port": 9696,
       "homepage_url": "https://prowlarr.com",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/prowlarr/fnos/ICON_256.PNG",
@@ -2027,7 +2027,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-23T08:57:36Z",
+      "updated_at": "2026-09-17T08:18:09Z",
       "download_count": 423,
       "app_type": "native",
       "category": "automation"
@@ -2301,7 +2301,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "0001-01-01T00:00:00Z",
+      "updated_at": "2026-09-17T08:18:01Z",
       "download_count": 212,
       "app_type": "native",
       "category": "automation"
@@ -2522,9 +2522,9 @@
       "file_prefix": "uptime-kuma",
       "display_name": "Uptime Kuma",
       "description": "简洁美观的服务监控工具，支持多种监控类型和告警通知",
-      "version": "2.5.4",
-      "fpk_version": "2.5.4",
-      "release_tag": "uptime-kuma/v2.5.4",
+      "version": "2.5.5",
+      "fpk_version": "2.5.5",
+      "release_tag": "uptime-kuma/v2.5.5",
       "service_port": 3001,
       "homepage_url": "https://github.com/louislam/uptime-kuma",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/uptime-kuma/fnos/ICON_256.PNG",
@@ -2532,7 +2532,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-12T08:14:13Z",
+      "updated_at": "2026-09-17T08:18:20Z",
       "download_count": 46,
       "app_type": "docker",
       "category": "system"
