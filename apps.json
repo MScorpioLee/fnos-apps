@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T08:18:34Z",
+  "generated_at": "2026-09-17T08:18:57Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -2101,9 +2101,9 @@
       "file_prefix": "radarr",
       "display_name": "Radarr",
       "description": "电影自动化管理工具，自动搜索、下载和整理电影",
-      "version": "6.3.0.10514",
-      "fpk_version": "6.3.0.10514",
-      "release_tag": "radarr/v6.3.0.10514",
+      "version": "6.4.4.10685",
+      "fpk_version": "6.4.4.10685",
+      "release_tag": "radarr/v6.4.4.10685",
       "service_port": 7878,
       "homepage_url": "https://radarr.video",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/radarr/fnos/ICON_256.PNG",
@@ -2111,7 +2111,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-13T09:10:30Z",
+      "updated_at": "2026-09-17T08:18:45Z",
       "download_count": 354,
       "app_type": "native",
       "category": "automation"
