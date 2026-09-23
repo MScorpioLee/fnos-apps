@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-22T08:17:33Z",
+  "generated_at": "2026-09-23T08:17:07Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -286,9 +286,9 @@
       "file_prefix": "chromium",
       "display_name": "Chromium",
       "description": "Chromium 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
-      "version": "26.09.1",
-      "fpk_version": "26.09.1",
-      "release_tag": "chromium/v26.09.1",
+      "version": "26.09.2",
+      "fpk_version": "26.09.2",
+      "release_tag": "chromium/v26.09.2",
       "service_port": 5802,
       "homepage_url": "https://github.com/jlesage/docker-chromium",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/chromium/fnos/ICON_256.PNG",
@@ -296,7 +296,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-15T08:17:00Z",
+      "updated_at": "2026-09-23T08:16:52Z",
       "download_count": 648,
       "app_type": "docker",
       "category": "browser"
@@ -538,9 +538,9 @@
       "file_prefix": "ente",
       "display_name": "Ente",
       "description": "端到端加密照片备份和存储服务，Google Photos 的隐私替代方案。",
-      "version": "latest-2026.09.22",
-      "fpk_version": "latest-2026.09.22",
-      "release_tag": "ente/vlatest-2026.09.22",
+      "version": "latest-2026.09.23",
+      "fpk_version": "latest-2026.09.23",
+      "release_tag": "ente/vlatest-2026.09.23",
       "service_port": 8510,
       "homepage_url": "https://ente.io",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/ente/fnos/ICON_256.PNG",
@@ -548,7 +548,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-22T08:16:46Z",
+      "updated_at": "2026-09-23T08:16:51Z",
       "download_count": 60,
       "app_type": "docker",
       "category": "media",
@@ -602,9 +602,9 @@
       "file_prefix": "firefox",
       "display_name": "Firefox",
       "description": "Firefox 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
-      "version": "26.08.3",
-      "fpk_version": "26.08.3",
-      "release_tag": "firefox/v26.08.3",
+      "version": "26.09.1",
+      "fpk_version": "26.09.1",
+      "release_tag": "firefox/v26.09.1",
       "service_port": 5801,
       "homepage_url": "https://github.com/jlesage/docker-firefox",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/firefox/fnos/ICON_256.PNG",
@@ -612,7 +612,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-27T11:26:58Z",
+      "updated_at": "2026-09-23T08:16:55Z",
       "download_count": 557,
       "app_type": "docker",
       "category": "browser"
