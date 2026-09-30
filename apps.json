@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-30T08:18:25Z",
+  "generated_at": "2026-09-30T08:18:48Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -2438,9 +2438,9 @@
       "file_prefix": "tailscale",
       "display_name": "Tailscale",
       "description": "Tailscale VPN 客户端，零配置组建安全私有网络，支持远程访问 NAS。",
-      "version": "1.102.4",
-      "fpk_version": "1.102.4",
-      "release_tag": "tailscale/v1.102.4",
+      "version": "1.102.5",
+      "fpk_version": "1.102.5",
+      "release_tag": "tailscale/v1.102.5",
       "service_port": 8088,
       "homepage_url": "https://github.com/tailscale/tailscale",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/tailscale/fnos/ICON_256.PNG",
@@ -2448,7 +2448,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-11T08:16:24Z",
+      "updated_at": "2026-09-30T08:18:29Z",
       "download_count": 272,
       "app_type": "docker",
       "category": "network"
