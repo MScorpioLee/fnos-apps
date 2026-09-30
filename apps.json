@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-30T08:18:02Z",
+  "generated_at": "2026-09-30T08:18:25Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -707,9 +707,9 @@
       "file_prefix": "gitea",
       "display_name": "Gitea",
       "description": "轻量级 Git 代码托管服务器，提供代码仓库、Issue 追踪和 CI/CD。",
-      "version": "1.27.3",
-      "fpk_version": "1.27.3",
-      "release_tag": "gitea/v1.27.3",
+      "version": "28.0.0",
+      "fpk_version": "28.0.0",
+      "release_tag": "gitea/v28.0.0",
       "service_port": 3033,
       "homepage_url": "https://gitea.com",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/gitea/fnos/ICON_256.PNG",
@@ -717,7 +717,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-30T08:14:26Z",
+      "updated_at": "2026-09-30T08:18:05Z",
       "download_count": 38,
       "app_type": "native",
       "category": "system"
@@ -963,9 +963,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.2713",
-      "fpk_version": "0.24.2713",
-      "release_tag": "jackett/v0.24.2713",
+      "version": "0.24.2738",
+      "fpk_version": "0.24.2738",
+      "release_tag": "jackett/v0.24.2738",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -973,7 +973,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-29T08:17:52Z",
+      "updated_at": "2026-09-30T08:18:00Z",
       "download_count": 111,
       "app_type": "native",
       "category": "automation"
@@ -1702,9 +1702,9 @@
       "file_prefix": "nginx-ui",
       "display_name": "Nginx UI",
       "description": "Nginx可视化管理面板，内置Nginx引擎，支持在线编辑配置、一键Reload、SSL证书管理。",
-      "version": "2.7.0",
-      "fpk_version": "2.7.0",
-      "release_tag": "nginx-ui/v2.7.0",
+      "version": "2.8.1",
+      "fpk_version": "2.8.1",
+      "release_tag": "nginx-ui/v2.8.1",
       "service_port": 8889,
       "homepage_url": "https://github.com/0xJacky/nginx-ui",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/nginx-ui/fnos/ICON_256.PNG",
@@ -1712,7 +1712,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-28T08:23:54Z",
+      "updated_at": "2026-09-30T08:18:04Z",
       "download_count": 124,
       "app_type": "native",
       "category": "system"
