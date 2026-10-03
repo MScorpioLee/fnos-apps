@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-03T08:16:13Z",
+  "generated_at": "2026-10-03T08:16:41Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -1702,9 +1702,9 @@
       "file_prefix": "nginx-ui",
       "display_name": "Nginx UI",
       "description": "Nginx可视化管理面板，内置Nginx引擎，支持在线编辑配置、一键Reload、SSL证书管理。",
-      "version": "2.8.1",
-      "fpk_version": "2.8.1",
-      "release_tag": "nginx-ui/v2.8.1",
+      "version": "2.8.2",
+      "fpk_version": "2.8.2",
+      "release_tag": "nginx-ui/v2.8.2",
       "service_port": 8889,
       "homepage_url": "https://github.com/0xJacky/nginx-ui",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/nginx-ui/fnos/ICON_256.PNG",
@@ -1712,7 +1712,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-30T08:18:04Z",
+      "updated_at": "2026-10-03T08:16:24Z",
       "download_count": 124,
       "app_type": "native",
       "category": "system"
