@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-03T08:16:41Z",
+  "generated_at": "2026-10-04T10:11:01Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -538,9 +538,9 @@
       "file_prefix": "ente",
       "display_name": "Ente",
       "description": "端到端加密照片备份和存储服务，Google Photos 的隐私替代方案。",
-      "version": "latest-2026.10.03",
-      "fpk_version": "latest-2026.10.03",
-      "release_tag": "ente/vlatest-2026.10.03",
+      "version": "latest-2026.10.04",
+      "fpk_version": "latest-2026.10.04",
+      "release_tag": "ente/vlatest-2026.10.04",
       "service_port": 8510,
       "homepage_url": "https://ente.io",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/ente/fnos/ICON_256.PNG",
@@ -548,7 +548,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-03T08:15:36Z",
+      "updated_at": "2026-10-04T10:10:43Z",
       "download_count": 60,
       "app_type": "docker",
       "category": "media",
@@ -858,9 +858,9 @@
       "file_prefix": "homarr",
       "display_name": "Homarr",
       "description": "可视化应用仪表盘，深度集成 *arr 套件状态展示",
-      "version": "2.0.0",
-      "fpk_version": "2.0.0",
-      "release_tag": "homarr/v2.0.0",
+      "version": "2.1.2",
+      "fpk_version": "2.1.2",
+      "release_tag": "homarr/v2.1.2",
       "service_port": 7575,
       "homepage_url": "https://homarr.dev",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/homarr/fnos/ICON_256.PNG",
@@ -868,7 +868,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-03T08:15:36Z",
+      "updated_at": "2026-10-04T10:10:41Z",
       "download_count": 45,
       "app_type": "docker",
       "category": "system"
