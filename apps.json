@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T08:19:26Z",
+  "generated_at": "2026-10-09T08:19:41Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -1533,9 +1533,9 @@
       "file_prefix": "n8n",
       "display_name": "n8n",
       "description": "可视化工作流自动化工具，支持连接数百种服务和 API。",
-      "version": "2.42.5",
-      "fpk_version": "2.42.5",
-      "release_tag": "n8n/v2.42.5",
+      "version": "2.42.6",
+      "fpk_version": "2.42.6",
+      "release_tag": "n8n/v2.42.6",
       "service_port": 5678,
       "homepage_url": "https://n8n.io",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/n8n/fnos/ICON_256.PNG",
@@ -1543,7 +1543,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-08T08:19:27Z",
+      "updated_at": "2026-10-09T08:19:37Z",
       "download_count": 73,
       "app_type": "docker",
       "category": "system"
