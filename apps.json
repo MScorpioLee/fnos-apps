@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-13T08:22:04Z",
+  "generated_at": "2026-10-13T08:22:21Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -644,9 +644,9 @@
       "file_prefix": "forgejo",
       "display_name": "Forgejo",
       "description": "社区驱动的轻量级 Git 代码托管服务器，Gitea 分支。",
-      "version": "16.0.5",
-      "fpk_version": "16.0.5",
-      "release_tag": "forgejo/v16.0.5",
+      "version": "16.0.6",
+      "fpk_version": "16.0.6",
+      "release_tag": "forgejo/v16.0.6",
       "service_port": 3005,
       "homepage_url": "https://codeberg.org/forgejo/forgejo",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/forgejo/fnos/ICON_256.PNG",
@@ -654,7 +654,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-18T08:16:13Z",
+      "updated_at": "2026-10-13T08:22:05Z",
       "download_count": 28,
       "app_type": "native",
       "category": "system"
@@ -963,9 +963,9 @@
       "file_prefix": "jackett",
       "display_name": "Jackett",
       "description": "Torrent 索引器代理，为 Sonarr/Radarr 等工具提供统一的搜索接口。",
-      "version": "0.24.2826",
-      "fpk_version": "0.24.2826",
-      "release_tag": "jackett/v0.24.2826",
+      "version": "0.24.2830",
+      "fpk_version": "0.24.2830",
+      "release_tag": "jackett/v0.24.2830",
       "service_port": 9117,
       "homepage_url": "https://github.com/Jackett/Jackett",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/jackett/fnos/ICON_256.PNG",
@@ -973,7 +973,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-12T08:31:08Z",
+      "updated_at": "2026-10-13T08:22:02Z",
       "download_count": 111,
       "app_type": "native",
       "category": "automation"
