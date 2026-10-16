@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-16T08:16:21Z",
+  "generated_at": "2026-10-16T08:16:39Z",
   "source": {
     "name": "MScorpioLee/fnos-apps",
     "url": "https://github.com/MScorpioLee/fnos-apps"
@@ -644,9 +644,9 @@
       "file_prefix": "forgejo",
       "display_name": "Forgejo",
       "description": "社区驱动的轻量级 Git 代码托管服务器，Gitea 分支。",
-      "version": "16.0.6",
-      "fpk_version": "16.0.6",
-      "release_tag": "forgejo/v16.0.6",
+      "version": "17.0.0",
+      "fpk_version": "17.0.0",
+      "release_tag": "forgejo/v17.0.0",
       "service_port": 3005,
       "homepage_url": "https://codeberg.org/forgejo/forgejo",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/forgejo/fnos/ICON_256.PNG",
@@ -654,7 +654,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-13T08:22:05Z",
+      "updated_at": "2026-10-16T08:16:22Z",
       "download_count": 28,
       "app_type": "native",
       "category": "system"
@@ -1744,9 +1744,9 @@
       "file_prefix": "ntfy",
       "display_name": "Ntfy",
       "description": "自托管的推送通知服务器，支持 HTTP 接口发送通知到手机和桌面。",
-      "version": "2.30.0",
-      "fpk_version": "2.30.0",
-      "release_tag": "ntfy/v2.30.0",
+      "version": "2.31.0",
+      "fpk_version": "2.31.0",
+      "release_tag": "ntfy/v2.31.0",
       "service_port": 2586,
       "homepage_url": "https://ntfy.sh",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/ntfy/fnos/ICON_256.PNG",
@@ -1754,7 +1754,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-10-13T08:22:00Z",
+      "updated_at": "2026-10-16T08:16:21Z",
       "download_count": 32,
       "app_type": "native",
       "category": "system"
@@ -1849,9 +1849,9 @@
       "file_prefix": "openlist",
       "display_name": "OpenList",
       "description": "支持多种存储后端的文件列表/WebDAV 程序（AList 社区分支）",
-      "version": "4.2.6",
-      "fpk_version": "4.2.6",
-      "release_tag": "openlist/v4.2.6",
+      "version": "4.2.7",
+      "fpk_version": "4.2.7",
+      "release_tag": "openlist/v4.2.7",
       "service_port": 5244,
       "homepage_url": "https://github.com/OpenListTeam/OpenList",
       "icon_url": "https://raw.githubusercontent.com/MScorpioLee/fnos-apps/main/apps/openlist/fnos/ICON_256.PNG",
@@ -1859,7 +1859,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-09-02T08:17:28Z",
+      "updated_at": "2026-10-16T08:16:34Z",
       "download_count": 153,
       "app_type": "native",
       "category": "content"
